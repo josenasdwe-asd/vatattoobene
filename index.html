@@ -12,9 +12,9 @@
 <meta property="og:title" content="VATATTOOBENE — Tattoo Studio boutique en Santiago" />
 <meta property="og:description" content="Estudio boutique en Providencia, Santiago. 12 artistas: fine-line, blackwork, realismo, cover-ups. Diseño 100% personalizado. Solo con cita." />
 <meta property="og:url" content="https://josenasdwe-asd.github.io/vatattoobene/" />
-<meta property="og:image" content="https://josenasdwe-asd.github.io/vatattoobene/assets/img/hero-bg.jpg" />
-<meta property="og:image:width" content="1671" />
-<meta property="og:image:height" content="941" />
+<meta property="og:image" content="https://josenasdwe-asd.github.io/vatattoobene/assets/img/book-ticket.jpg" />
+<meta property="og:image:width" content="1365" />
+<meta property="og:image:height" content="768" />
 <meta property="og:locale" content="es_CL" />
 <meta property="og:locale:alternate" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -58,7 +58,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --black:#0a0a0a; --dark:#111; --card:#161616; --border:#232323;
@@ -326,36 +326,28 @@
   .st p{font-size:.82rem;color:var(--grey)}
   .st span{font-size:.6rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;display:block;margin-top:1rem}
 
-  /* RESERVA — ticket físico: arte a la izquierda, cupón a la derecha, perforación al medio */
-  .book{position:relative;margin:5rem auto 0;max-width:1080px;display:grid;grid-template-columns:1.04fr .96fr;
-    background:#ede4cd;color:#161310;border-radius:14px;overflow:hidden;
-    border:1px solid rgba(90,74,48,.45);box-shadow:0 30px 70px rgba(0,0,0,.55)}
-  .tk-visual{position:relative;min-height:430px;background:#e9dfc6;overflow:hidden}
-  .tk-visual .tk-mark{position:absolute;inset:0;display:grid;place-items:center;padding:2.4rem}
-  .tk-visual .tk-mark img{width:min(66%,320px);height:auto;filter:drop-shadow(0 12px 26px rgba(0,0,0,.28))}
-  .tk-visual .tk-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:1}
-  .tk-body{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    padding:clamp(30px,4vw,54px) clamp(24px,3.4vw,50px);border-left:2px dashed rgba(90,74,48,.5);
-    background:radial-gradient(130% 100% at 50% 0%,rgba(255,255,255,.4),transparent 55%),#ede4cd}
-  .tk-notch{position:absolute;width:34px;height:34px;border-radius:50%;background:#0a0a0a;z-index:6;
-    box-shadow:inset 0 0 0 2px rgba(90,74,48,.35)}
-  .tk-notch.tl{left:-17px;top:-17px}
-  .tk-notch.br{left:-17px;bottom:-17px}
-  .tk-stub{display:inline-flex;align-items:center;gap:.55rem;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;
-    color:#8a7c5c;border:1px solid rgba(90,74,48,.4);padding:.42rem 1rem;border-radius:999px;margin-bottom:1.15rem;background:rgba(255,255,255,.28)}
-  .book h2{position:relative;font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,3.6vw,3rem);
-    line-height:.95;letter-spacing:.02em;margin:0;color:#141210}
-  .book p{position:relative;color:#57503f;font-size:.84rem;line-height:1.65;max-width:44ch;margin:.75rem auto 0}
-  .book .row{position:relative;display:flex;gap:.7rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap}
-  .b-wa{display:inline-flex;align-items:center;gap:.6rem;background:#1faa55;color:#fff;padding:.95rem 1.8rem;border-radius:999px;
-    font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:.25s}
+  /* RESERVA — ticket vintage completo: arte del usuario como fondo, contenido sobre el papel */
+  .book{position:relative;margin:5rem auto 0;max-width:1080px;aspect-ratio:1365/768;border-radius:18px;overflow:hidden;
+    background:#0c0b09;border:1px solid rgba(20,18,14,.8);box-shadow:0 30px 70px rgba(0,0,0,.55)}
+  .tk-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+  .book::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(44% 36% at 50% 58%,rgba(241,234,215,.6) 0%,rgba(241,234,215,.3) 55%,rgba(241,234,215,0) 100%)}
+  .tk-inner{position:relative;z-index:2;height:100%;width:min(76%,660px);margin:0 auto;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+    padding:8% 0 0}
+  .book h2{position:relative;font-family:'Anton',var(--display);font-weight:400;font-size:clamp(1.8rem,3.1vw,2.8rem);
+    line-height:.98;letter-spacing:.015em;margin:0;color:#181510;text-transform:uppercase}
+  .book p{position:relative;color:#4c4636;font-size:.8rem;line-height:1.6;max-width:46ch;margin:.75rem auto 0}
+  .book .row{position:relative;display:flex;gap:.65rem;justify-content:center;margin-top:1.1rem;flex-wrap:wrap}
+  .b-wa{display:inline-flex;align-items:center;gap:.6rem;background:#1faa55;color:#fff;padding:.85rem 1.5rem;border-radius:999px;
+    font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:.25s}
   .b-wa:hover{background:#178a45;transform:translateY(-1px)}
   .b-wa svg{width:16px;height:16px;fill:#fff}
-  .b-bk{display:inline-flex;align-items:center;gap:.6rem;background:#111;color:#fff;padding:.95rem 1.8rem;border-radius:999px;
-    font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:.25s}
+  .b-bk{display:inline-flex;align-items:center;gap:.6rem;background:#111;color:#fff;padding:.85rem 1.5rem;border-radius:999px;
+    font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:.25s}
   .b-bk:hover{background:#000;transform:translateY(-1px)}
   .b-bk svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:1.8}
-  .book small{position:relative;display:block;margin-top:1.1rem;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#6b6350}
+  .book small{position:relative;display:block;margin-top:.9rem;font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#6b6350}
 
   /* FOOTER */
   footer{background:var(--dark);border-top:1px solid var(--border);margin-top:5rem;padding:3.5rem 0 2rem}
@@ -479,11 +471,11 @@
     .team{grid-template-columns:1fr 1fr;gap:.9rem}
     .mmenu{gap:1.1rem;padding:80px 20px 30px;overflow-y:auto}
     .mmenu a{font-size:clamp(1.7rem,7vw,2.2rem)}
-    .book{margin-top:3rem;grid-template-columns:1fr}
-    .tk-visual{min-height:0;aspect-ratio:16/9}
-    .tk-body{border-left:none;border-top:2px dashed rgba(90,74,48,.5);padding:1.6rem 1.2rem 1.9rem}
-    .tk-notch.tl{left:-17px;top:-17px}
-    .tk-notch.br{left:auto;right:-17px;top:-17px;bottom:auto}
+    .book{margin-top:3rem;aspect-ratio:auto;background:#e8e0ce}
+    .book::after{content:none}
+    .tk-photo{position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+    .tk-inner{width:100%;height:auto;margin:0;padding:1.7rem 1.3rem 2rem;border-top:2px dashed rgba(90,74,48,.5)}
+    .book p{max-width:44ch;margin:.7rem auto 0}
     .fgrid{grid-template-columns:1fr;gap:1.6rem}
   }
 
@@ -508,7 +500,7 @@
     .cover-txt{padding:26px 20px}
     .cover-txt h3{font-size:clamp(1.9rem,8vw,2.4rem)}
     .cover-txt .btn-gold{display:block;text-align:center}
-    .book h2{font-size:clamp(2rem,11vw,2.8rem)}
+    .book h2{font-size:clamp(1.9rem,10vw,2.6rem)}
     .book .row .b-wa,.book .row .b-bk{flex:1 1 100%;justify-content:center;text-align:center;padding:1rem 1rem}
     .book small{letter-spacing:.1em;line-height:2}
     .modal-head{grid-template-columns:1fr;padding:3rem 1.2rem 1rem;text-align:center;justify-items:center}
@@ -683,14 +675,8 @@
 <section id="reservar" style="padding-top:2rem">
   <div class="wrap">
     <div class="book rv" id="book-ticket" role="region" aria-label="Reserva tu cita en VATATTOOBENE">
-      <div class="tk-visual">
-        <div class="tk-mark" aria-hidden="true"><img src="assets/img/hero-mark.svg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
-        <img class="tk-photo" src="assets/img/book-ticket.jpg" alt="Ticket VA Tattoo Bene — tu turno en la silla" loading="lazy" onerror="this.remove()">
-      </div>
-      <div class="tk-body">
-      <span class="tk-notch tl" aria-hidden="true"></span>
-      <span class="tk-notch br" aria-hidden="true"></span>
-      <span class="tk-stub">Admit one — Stub Nº 000247</span>
+      <img class="tk-photo" src="assets/img/book-ticket.jpg" alt="Ticket vintage de VATATTOOBENE — papel envejecido, logo chicano y tigre de ojos ámbar" loading="lazy" onerror="this.style.display='none'">
+      <div class="tk-inner">
       <h2 data-es="TU TURNO EN LA SILLA." data-en="YOUR TURN IN THE CHAIR.">TU TURNO EN LA SILLA.</h2>
       <p data-es="Escríbenos con tu idea, zona y tamaño. Te respondemos en 24 horas con diagnóstico honesto y presupuesto." data-en="Send us your idea, placement and size. We reply within 24 hours with an honest assessment and quote.">Escríbenos con tu idea, zona y tamaño. Te respondemos en 24 horas con diagnóstico honesto y presupuesto.</p>
       <div class="row">

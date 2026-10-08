@@ -56,6 +56,20 @@
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "55" }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "¿Cómo agendo mi cita en VATATTOOBENE?", "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos por WhatsApp con tu idea, la zona del cuerpo y el tamaño aproximado. Respondemos en 24 horas con diagnóstico honesto y presupuesto. Para bloquear la fecha se requiere una seña del 50%, que se descuenta del total." } },
+    { "@type": "Question", "name": "¿Cuánto cuesta un tatuaje?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tamaño, detalle y zona. Referencial: flash desde $35.000 CLP, mediana 8–15 cm entre $70.000 y $130.000, grande 16–25 cm entre $130.000 y $250.000. El presupuesto final lo fija tu artista y queda cerrado antes de la seña." } },
+    { "@type": "Question", "name": "¿La seña se descuenta del total?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, la seña del 50% se descuenta del valor final de la pieza. Se pierde si la sesión se cancela con menos de 72 horas de aviso o si no asistes; con aviso anticipado se puede reprogramar." } },
+    { "@type": "Question", "name": "¿Puedo traer mi propio diseño?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. El artista adapta tu idea a tu piel y al estilo de la casa. Cada pieza se dibuja desde cero para un solo cuerpo — no repetimos diseños." } },
+    { "@type": "Question", "name": "¿Cuánto tarda en curar un tatuaje?", "acceptedAnswer": { "@type": "Answer", "text": "La curación superficial toma 2 a 4 semanas y la completa 2 a 3 meses. Entregamos los cuidados por escrito y hacemos seguimiento por WhatsApp durante el proceso." } },
+    { "@type": "Question", "name": "¿Hacen cover-ups?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, es una de las especialidades del estudio. Evaluamos tu tatuaje actual y te proponemos opciones realistas; si tu idea no va, te lo decimos antes de cobrarte." } }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -332,10 +346,9 @@
   .tk-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
   .book::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
     background:radial-gradient(44% 36% at 50% 58%,rgba(241,234,215,.6) 0%,rgba(241,234,215,.3) 55%,rgba(241,234,215,0) 100%)}
-  .tk-inner{position:relative;z-index:2;height:100%;width:min(76%,660px);margin:0 auto;
-    display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
-    padding:8% 0 0}
-  .book h2{position:relative;font-family:'Anton',var(--display);font-weight:400;font-size:clamp(1.8rem,3.1vw,2.8rem);
+  .tk-inner{position:absolute;z-index:2;top:36.5%;left:50%;transform:translateX(-50%);width:min(74%,780px);
+    display:flex;flex-direction:column;justify-content:flex-start;align-items:center;text-align:center}
+  .book h2{position:relative;font-family:'Anton',var(--display);font-weight:400;font-size:clamp(1.5rem,2.2vw,2rem);
     line-height:.98;letter-spacing:.015em;margin:0;color:#181510;text-transform:uppercase}
   .book p{position:relative;color:#4c4636;font-size:.8rem;line-height:1.6;max-width:46ch;margin:.75rem auto 0}
   .book .row{position:relative;display:flex;gap:.65rem;justify-content:center;margin-top:1.1rem;flex-wrap:wrap}
@@ -347,7 +360,61 @@
     font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:.25s}
   .b-bk:hover{background:#000;transform:translateY(-1px)}
   .b-bk svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:1.8}
-  .book small{position:relative;display:block;margin-top:.9rem;font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#6b6350}
+  .book small{position:relative;display:block;margin-top:.4rem;font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#6b6350}
+
+  /* OJOS DEL TIGRE — brillo ámbar al hover / al enfocar el boleto */
+  .tk-eyes{position:absolute;top:0;left:0;width:100%;aspect-ratio:1365/768;z-index:1;pointer-events:none;opacity:0;transition:opacity .55s ease}
+  .book:hover .tk-eyes,.book:focus-within .tk-eyes,.book.lit .tk-eyes{opacity:1}
+  .tk-eyes i{position:absolute;border-radius:50%;mix-blend-mode:screen;filter:blur(3px) saturate(1.35);
+    background:radial-gradient(closest-side,rgba(255,212,105,1) 0%,rgba(255,165,35,.78) 42%,rgba(255,120,0,.34) 62%,rgba(255,120,0,0) 80%);
+    animation:eyeFlicker 2.6s ease-in-out infinite}
+  .tk-eyes i:nth-child(1){left:68.6%;top:34.7%;width:4.7%;aspect-ratio:1.5/1}
+  .tk-eyes i:nth-child(2){left:81.9%;top:31.7%;width:4.3%;aspect-ratio:1.5/1;animation-delay:1.3s}
+  @keyframes eyeFlicker{0%,100%{opacity:.8;transform:scale(1)}45%{opacity:1;transform:scale(1.14)}}
+  @media(prefers-reduced-motion:reduce){.tk-eyes i{animation:none}}
+
+  /* BOLETO — formulario pre-llenado de WhatsApp */
+  .book .tk-lead{font-size:.72rem;max-width:64ch;margin:.3rem auto 0}
+  .tk-form{position:relative;width:100%;max-width:720px;margin:.55rem auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem .8rem;text-align:left}
+  .tf{display:flex;flex-direction:column;gap:.18rem;min-width:0}
+  .tf.full{grid-column:1/-1}
+  .tf label{font-size:.52rem;letter-spacing:.24em;text-transform:uppercase;color:#6b6350}
+  .tf input,.tf select,.tf textarea{width:100%;background:rgba(255,255,255,.32);border:0;border-bottom:1.5px dashed rgba(90,74,48,.55);
+    border-radius:4px 4px 0 0;font-family:var(--serif);font-style:italic;font-size:.88rem;color:#241f14;padding:.25rem .45rem;outline:none;
+    transition:border-color .25s,background .25s,box-shadow .25s;resize:none;appearance:none;-webkit-appearance:none}
+  .tf select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%235a4a30' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .4rem center}
+  .tf select option{font-family:var(--body);font-style:normal;font-size:.85rem}
+  .tf input:focus,.tf select:focus,.tf textarea:focus{border-bottom-color:#a87f1f;border-bottom-style:solid;background:rgba(255,255,255,.55);box-shadow:0 8px 16px -10px rgba(168,127,31,.55)}
+  .tf ::placeholder{color:#8d8368;opacity:1}
+  .tk-send{grid-column:1/-1;justify-content:center;margin-top:.35rem;cursor:pointer;border:0;padding:.6rem 1.4rem}
+  .tk-send:active{transform:scale(.98)}
+
+  /* FAQ — dudas y valores orientativos */
+  .faq-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:2.6rem;margin-top:2.6rem;align-items:start}
+  .faq-t{font-family:var(--display);font-weight:400;font-size:1.2rem;letter-spacing:.1em;color:var(--gold);margin-bottom:1rem;text-transform:uppercase}
+  .price{border-top:1px solid var(--border)}
+  .pr{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.8rem 2px;border-bottom:1px solid var(--border)}
+  .pr b{font-family:var(--display);font-weight:400;font-size:1rem;letter-spacing:.06em}
+  .pr b em{font-family:var(--serif);font-style:italic;font-size:.78em;color:var(--grey);letter-spacing:0;text-transform:none}
+  .pr span{color:var(--gold);font-size:.78rem;letter-spacing:.06em;white-space:nowrap}
+  .pnote{font-size:.7rem;color:var(--grey);line-height:1.75;margin-top:1.1rem}
+  details.fq{border-bottom:1px solid var(--border)}
+  details.fq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 2px;
+    font-family:var(--display);font-weight:400;font-size:1.08rem;letter-spacing:.05em;color:var(--white)}
+  details.fq summary::-webkit-details-marker{display:none}
+  details.fq summary::after{content:'+';color:var(--gold);font-size:1.35rem;line-height:1;transition:transform .25s}
+  details.fq[open] summary::after{transform:rotate(45deg)}
+  details.fq summary:hover{color:var(--gold)}
+  details.fq p{padding:0 2px 1.15rem;color:var(--grey);font-size:.85rem;line-height:1.8;max-width:62ch}
+
+  /* UBICACIÓN — mapa */
+  .map-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:1.4rem;margin-top:2.6rem;align-items:stretch}
+  .map-info{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.9rem;display:flex;flex-direction:column;gap:1rem}
+  .map-info h3{font-family:var(--display);font-weight:400;font-size:1.5rem;letter-spacing:.05em}
+  .map-info p{color:var(--grey);font-size:.85rem;line-height:1.8}
+  .map-info .addr{font-family:var(--display);font-size:1.2rem;color:var(--white);letter-spacing:.05em}
+  .map-frame{position:relative;border:1px solid var(--gold);border-radius:14px;overflow:hidden;background:var(--card);min-height:340px}
+  .map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.9) contrast(.85) sepia(.16)}
 
   /* FOOTER */
   footer{background:var(--dark);border-top:1px solid var(--border);margin-top:5rem;padding:3.5rem 0 2rem}
@@ -474,7 +541,7 @@
     .book{margin-top:3rem;aspect-ratio:auto;background:#e8e0ce}
     .book::after{content:none}
     .tk-photo{position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-    .tk-inner{width:100%;height:auto;margin:0;padding:1.7rem 1.3rem 2rem;border-top:2px dashed rgba(90,74,48,.5)}
+    .tk-inner{position:static;transform:none;width:100%;height:auto;margin:0;padding:1.7rem 1.3rem 2rem;border-top:2px dashed rgba(90,74,48,.5)}
     .book p{max-width:44ch;margin:.7rem auto 0}
     .fgrid{grid-template-columns:1fr;gap:1.6rem}
   }
@@ -503,6 +570,8 @@
     .book h2{font-size:clamp(1.9rem,10vw,2.6rem)}
     .book .row .b-wa,.book .row .b-bk{flex:1 1 100%;justify-content:center;text-align:center;padding:1rem 1rem}
     .book small{letter-spacing:.1em;line-height:2}
+    .tk-form{max-width:100%;grid-template-columns:1fr 1fr;gap:.55rem .7rem}
+    .tf input,.tf select,.tf textarea{font-size:16px}
     .modal-head{grid-template-columns:1fr;padding:3rem 1.2rem 1rem;text-align:center;justify-items:center}
     .modal-mono{width:96px;height:112px;font-size:52px}
     .modal-bio{padding:0 1.2rem}
@@ -560,6 +629,8 @@
   <a href="#coverup" onclick="document.getElementById('mmenu').classList.remove('open')">Cover-Up</a>
   <a href="#proceso" onclick="document.getElementById('mmenu').classList.remove('open')">Proceso</a>
   <a href="#reservar" onclick="document.getElementById('mmenu').classList.remove('open')">Reservar</a>
+  <a href="#faq" onclick="document.getElementById('mmenu').classList.remove('open')">FAQ</a>
+  <a href="#visita" onclick="document.getElementById('mmenu').classList.remove('open')">Ubicación</a>
   <a class="m-cta" href="https://wa.me/56920531438?text=Hola%20VATATTOOBENE%2C%20quiero%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
   <a href="#" onclick="document.getElementById('mmenu').classList.remove('open');return false" style="font-size:1rem;letter-spacing:.2em;opacity:.6">✕ CERRAR</a>
 </div>
@@ -678,12 +749,114 @@
       <img class="tk-photo" src="assets/img/book-ticket.jpg" alt="Ticket vintage de VATATTOOBENE — papel envejecido, logo chicano y tigre de ojos ámbar" loading="lazy" onerror="this.style.display='none'">
       <div class="tk-inner">
       <h2 data-es="TU TURNO EN LA SILLA." data-en="YOUR TURN IN THE CHAIR.">TU TURNO EN LA SILLA.</h2>
-      <p data-es="Escríbenos con tu idea, zona y tamaño. Te respondemos en 24 horas con diagnóstico honesto y presupuesto." data-en="Send us your idea, placement and size. We reply within 24 hours with an honest assessment and quote.">Escríbenos con tu idea, zona y tamaño. Te respondemos en 24 horas con diagnóstico honesto y presupuesto.</p>
-      <div class="row">
-        <a class="b-wa" href="https://wa.me/56920531438?text=Hola%20VATATTOOBENE%2C%20quiero%20cotizar%20mi%20idea" target="_blank" rel="noopener"><span data-es="Cotizar por WhatsApp" data-en="Quote on WhatsApp">Cotizar por WhatsApp</span><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-        <a class="b-bk" href="https://wa.me/56920531438?text=Hola%20VATATTOOBENE%2C%20quiero%20reservar%20mi%20cita" target="_blank" rel="noopener"><span data-es="Reservar cita" data-en="Book appointment">Reservar cita</span><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg></a>
-      </div>
+      <p class="tk-lead" data-es="Llena el boleto y te escribimos en 24 horas con tu presupuesto." data-en="Fill in the ticket — we'll message you within 24 hours with your quote.">Llena el boleto y te escribimos en 24 horas con tu presupuesto.</p>
+      <form class="tk-form" id="tk-form">
+        <div class="tf">
+          <label for="tf-nombre" data-es="Nombre" data-en="Name">Nombre</label>
+          <input id="tf-nombre" type="text" name="nombre" required maxlength="60" autocomplete="name" data-es-ph="Tu nombre" data-en-ph="Your name" placeholder="Tu nombre">
+        </div>
+        <div class="tf">
+          <label for="tf-wa" data-es="WhatsApp" data-en="WhatsApp">WhatsApp</label>
+          <input id="tf-wa" type="tel" name="whatsapp" inputmode="tel" maxlength="24" data-es-ph="+56 9 …" data-en-ph="+56 9 …" placeholder="+56 9 …">
+        </div>
+        <div class="tf">
+          <label for="tf-zona" data-es="Zona del cuerpo" data-en="Placement">Zona del cuerpo</label>
+          <select id="tf-zona" required>
+            <option value="" disabled selected hidden data-es="Elegir zona…" data-en="Choose…">Elegir zona…</option>
+            <option data-es="Antebrazo" data-en="Forearm">Antebrazo</option>
+            <option data-es="Brazo" data-en="Upper arm">Brazo</option>
+            <option data-es="Pierna / Pantorrilla" data-en="Leg / Calf">Pierna / Pantorrilla</option>
+            <option data-es="Muslo" data-en="Thigh">Muslo</option>
+            <option data-es="Espalda" data-en="Back">Espalda</option>
+            <option data-es="Pecho" data-en="Chest">Pecho</option>
+            <option data-es="Costillas" data-en="Ribs">Costillas</option>
+            <option data-es="Cuello / Mano" data-en="Neck / Hand">Cuello / Mano</option>
+            <option data-es="Otra zona" data-en="Other">Otra zona</option>
+          </select>
+        </div>
+        <div class="tf">
+          <label for="tf-tam" data-es="Tamaño aprox." data-en="Approx. size">Tamaño aprox.</label>
+          <select id="tf-tam" required>
+            <option value="" disabled selected hidden data-es="Elegir tamaño…" data-en="Choose…">Elegir tamaño…</option>
+            <option data-es="Chica — hasta 7 cm" data-en="Small — up to 3 in">Chica — hasta 7 cm</option>
+            <option data-es="Mediana — 8 a 15 cm" data-en="Medium — 3 to 6 in">Mediana — 8 a 15 cm</option>
+            <option data-es="Grande — 16 a 25 cm" data-en="Large — 6 to 10 in">Grande — 16 a 25 cm</option>
+            <option data-es="Pieza grande / por sesiones" data-en="XL piece / multi-session">Pieza grande / por sesiones</option>
+          </select>
+        </div>
+        <div class="tf full">
+          <label for="tf-idea" data-es="Tu idea" data-en="Your idea">Tu idea</label>
+          <textarea id="tf-idea" rows="2" maxlength="400" data-es-ph="Cuéntanos tu idea: estilo, referencias, si es cover-up…" data-en-ph="Tell us your idea: style, references, cover-up…" placeholder="Cuéntanos tu idea: estilo, referencias, si es cover-up…"></textarea>
+        </div>
+        <button class="b-wa tk-send" type="submit"><span data-es="Pedir horario por WhatsApp" data-en="Book your slot on WhatsApp">Pedir horario por WhatsApp</span><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></button>
+      </form>
       <small data-es="Solo con cita / Se requiere seña del 50% / Lun–Dom 11:00–20:00." data-en="Appointment only / 50% deposit required / Mon–Sun 11:00–20:00.">Solo con cita / Se requiere seña del 50% / Lun–Dom 11:00–20:00.</small>
+      </div>
+      <div class="tk-eyes" aria-hidden="true"><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="sec-bar rv"><h2>07 / Preguntas <em>— antes de la tinta</em></h2><span class="n" data-es="[ FAQ · Valores ]" data-en="[ FAQ · Pricing ]">[ FAQ · Valores ]</span></div>
+    <div class="faq-grid">
+      <div class="rv">
+        <h3 class="faq-t" data-es="Valores orientativos" data-en="Reference pricing">Valores orientativos</h3>
+        <div class="price">
+          <div class="pr"><b><span data-es="Flash" data-en="Flash">Flash</span> <em data-es="diseño del estudio" data-en="studio design">diseño del estudio</em></b><span data-es="desde $35.000" data-en="from CLP 35.000">desde $35.000</span></div>
+          <div class="pr"><b><span data-es="Chica" data-en="Small">Chica</span> <em data-es="hasta 7 cm" data-en="up to 3 in">hasta 7 cm</em></b><span data-es="desde $45.000" data-en="from CLP 45.000">desde $45.000</span></div>
+          <div class="pr"><b><span data-es="Mediana" data-en="Medium">Mediana</span> <em data-es="8 a 15 cm" data-en="3 to 6 in">8 a 15 cm</em></b><span>$70.000 – $130.000</span></div>
+          <div class="pr"><b><span data-es="Grande" data-en="Large">Grande</span> <em data-es="16 a 25 cm" data-en="6 to 10 in">16 a 25 cm</em></b><span>$130.000 – $250.000</span></div>
+          <div class="pr"><b><span data-es="Pieza grande" data-en="XL piece">Pieza grande</span> <em data-es="por sesión" data-en="per session">por sesión</em></b><span data-es="$70.000 – $90.000 / h" data-en="CLP 70.000 – 90.000 / h">$70.000 – $90.000 / h</span></div>
+          <div class="pr"><b><span data-es="Cover-up" data-en="Cover-up">Cover-up</span> <em data-es="previa evaluación" data-en="after assessment">previa evaluación</em></b><span data-es="desde $150.000" data-en="from CLP 150.000">desde $150.000</span></div>
+        </div>
+        <p class="pnote" data-es="Valores referenciales en CLP. El presupuesto final lo fija tu artista según detalle, zona y complejidad — y queda cerrado antes de la seña. Sin sorpresas." data-en="Reference prices in CLP. Your artist sets the final quote based on detail, placement and complexity — and it's locked before the deposit. No surprises.">Valores referenciales en CLP. El presupuesto final lo fija tu artista según detalle, zona y complejidad — y queda cerrado antes de la seña. Sin sorpresas.</p>
+      </div>
+      <div class="rv">
+        <h3 class="faq-t" data-es="Dudas frecuentes" data-en="Common questions">Dudas frecuentes</h3>
+        <details class="fq">
+          <summary data-es="¿Cómo agendo mi cita?" data-en="How do I book?">¿Cómo agendo mi cita?</summary>
+          <p data-es="Escríbenos por WhatsApp con tu idea, zona y tamaño. En 24 horas te respondemos con diagnóstico honesto y presupuesto. La fecha se bloquea con una seña del 50% que se descuenta del total." data-en="Message us on WhatsApp with your idea, placement and size. Within 24 hours we reply with an honest assessment and quote. Your date is locked with a 50% deposit that counts toward the total.">Escríbenos por WhatsApp con tu idea, zona y tamaño. En 24 horas te respondemos con diagnóstico honesto y presupuesto. La fecha se bloquea con una seña del 50% que se descuenta del total.</p>
+        </details>
+        <details class="fq">
+          <summary data-es="¿Qué incluye el presupuesto?" data-en="What does the quote include?">¿Qué incluye el presupuesto?</summary>
+          <p data-es="El diseño personalizado dibujado para tu cuerpo, la sesión y el material. La cotización queda cerrada antes de agendar; si el diseño cambia, se recotiza antes de la tinta — nunca sobre la silla." data-en="The custom design drawn for your body, the session and materials. The quote is locked before booking; if the design changes, it's re-quoted before any ink — never mid-session.">El diseño personalizado dibujado para tu cuerpo, la sesión y el material. La cotización queda cerrada antes de agendar; si el diseño cambia, se recotiza antes de la tinta — nunca sobre la silla.</p>
+        </details>
+        <details class="fq">
+          <summary data-es="¿La seña se descuenta?" data-en="Is the deposit refunded?">¿La seña se descuenta?</summary>
+          <p data-es="Sí, se descuenta del valor final. Se pierde si cancelas con menos de 72 horas o no asistes; con aviso anticipado puedes reprogramar sin costo una vez." data-en="Yes, it counts toward the final price. It's forfeited if you cancel with less than 72 hours' notice or no-show; with enough notice you can reschedule once at no cost.">Sí, se descuenta del valor final. Se pierde si cancelas con menos de 72 horas o no asistes; con aviso anticipado puedes reprogramar sin costo una vez.</p>
+        </details>
+        <details class="fq">
+          <summary data-es="¿Puedo traer mi propio diseño?" data-en="Can I bring my own design?">¿Puedo traer mi propio diseño?</summary>
+          <p data-es="Sí. El artista adapta tu idea a tu piel y al estilo de la casa. Cada pieza se dibuja desde cero para un solo cuerpo — no repetimos diseños." data-en="Yes. The artist adapts your idea to your skin and the house style. Every piece is drawn from scratch for one body only — we never repeat designs.">Sí. El artista adapta tu idea a tu piel y al estilo de la casa. Cada pieza se dibuja desde cero para un solo cuerpo — no repetimos diseños.</p>
+        </details>
+        <details class="fq">
+          <summary data-es="¿Cuánto tarda en curar?" data-en="How long does healing take?">¿Cuánto tarda en curar?</summary>
+          <p data-es="La superficie cura en 2–4 semanas; la curación completa toma 2–3 meses. Entregamos los cuidados por escrito y hacemos seguimiento por WhatsApp durante todo el proceso." data-en="The surface heals in 2–4 weeks; full healing takes 2–3 months. You get written aftercare instructions and WhatsApp follow-up throughout.">La superficie cura en 2–4 semanas; la curación completa toma 2–3 meses. Entregamos los cuidados por escrito y hacemos seguimiento por WhatsApp durante todo el proceso.</p>
+        </details>
+        <details class="fq">
+          <summary data-es="¿Hacen cover-ups?" data-en="Do you do cover-ups?">¿Hacen cover-ups?</summary>
+          <p data-es="Sí, es especialidad de la casa. Evaluamos tu tatuaje actual y te proponemos opciones realistas; si tu idea no va, te lo decimos antes de cobrarte." data-en="Yes — it's one of our specialties. We assess your existing tattoo and propose realistic options; if your idea won't work, we tell you before charging you.">Sí, es especialidad de la casa. Evaluamos tu tatuaje actual y te proponemos opciones realistas; si tu idea no va, te lo decimos antes de cobrarte.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visita" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="sec-bar rv"><h2>08 / Ubicación <em>— el estudio</em></h2><span class="n" data-es="[ Solo con cita ]" data-en="[ Appointment only ]">[ Solo con cita ]</span></div>
+    <div class="map-grid">
+      <div class="map-info rv">
+        <h3 data-es="Te esperamos en la silla" data-en="Waiting for you in the chair">Te esperamos en la silla</h3>
+        <p class="addr">José Arrieta 96, Santiago</p>
+        <p data-es="Atendemos solo con cita previa. Escríbenos, coordinamos tu hora y te confirmamos cómo llegar — estamos a pasos del transporte público." data-en="We work by appointment only. Message us, we schedule your slot and confirm how to get here — we're steps away from public transit.">Atendemos solo con cita previa. Escríbenos, coordinamos tu hora y te confirmamos cómo llegar — estamos a pasos del transporte público.</p>
+        <p data-es="Lun–Dom 11:00–20:00" data-en="Mon–Sun 11:00–20:00">Lun–Dom 11:00–20:00</p>
+        <a class="b-wa" href="https://wa.me/56920531438?text=Hola%20VATATTOOBENE%2C%20quiero%20coordinar%20mi%20visita" target="_blank" rel="noopener"><span data-es="Coordinar visita" data-en="Plan your visit">Coordinar visita</span><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+      </div>
+      <div class="map-frame rv">
+        <iframe title="Mapa — VATATTOOBENE, José Arrieta 96, Santiago" src="https://www.google.com/maps?q=Jos%C3%A9%20Arrieta%2096%2C%20Santiago%2C%20Chile&output=embed&hl=es" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -693,7 +866,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div><div class="fb">VATATTOO<span>BENE</span></div><p style="margin-top:1rem;max-width:30ch" data-es="Estudio boutique — Providencia, Santiago. Línea fina · Blackwork · Cover-up." data-en="Boutique studio — Santiago, Chile. Fine-line · Blackwork · Cover-up.">Estudio boutique — Providencia, Santiago. Línea fina · Blackwork · Cover-up.</p></div>
-      <div class="fcol"><b data-es="Navegar" data-en="Browse">Navegar</b><a href="#equipo" data-es="Equipo" data-en="Crew">Equipo</a><a href="#flash">Flash</a><a href="#coverup">Cover-Up</a><a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a><a href="#reservar" data-es="Reservar" data-en="Book">Reservar</a></div>
+      <div class="fcol"><b data-es="Navegar" data-en="Browse">Navegar</b><a href="#equipo" data-es="Equipo" data-en="Crew">Equipo</a><a href="#flash">Flash</a><a href="#coverup">Cover-Up</a><a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a><a href="#reservar" data-es="Reservar" data-en="Book">Reservar</a><a href="#faq">FAQ</a><a href="#visita" data-es="Ubicación" data-en="Location">Ubicación</a></div>
       <div class="fcol"><b>Contacto</b><a href="https://wa.me/56920531438" target="_blank" rel="noopener">+56 9 2053 1438</a><a href="https://www.instagram.com/vatattoobene/" target="_blank" rel="noopener">@vatattoobene</a><p>José Arrieta 96, Santiago<br>Lun–Dom 11:00–20:00 · Solo con cita</p></div>
     </div>
     <div class="legal"><span>© 2026 Vatattoobene — Santiago, Chile</span><span>Tatuaje fine-line · Blackwork · Cover-up Santiago</span></div>
@@ -717,6 +890,9 @@
     document.getElementById('btn-en').classList.toggle('on', l === 'en');
     document.querySelectorAll('[data-es]').forEach(function(el){
       el.textContent = l === 'es' ? el.dataset.es : (el.dataset.en || el.dataset.es);
+    });
+    document.querySelectorAll('[data-es-ph]').forEach(function(el){
+      el.placeholder = l === 'es' ? el.dataset.esPh : (el.dataset.enPh || el.dataset.esPh);
     });
   };
   /* reveal */
@@ -825,6 +1001,28 @@
       row.addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; });
       row.addEventListener('mouseleave', function(){ prev.classList.remove('on'); });
     });
+  }
+
+  /* boleto → WhatsApp con mensaje pre-llenado */
+  var tkForm = document.getElementById('tk-form');
+  if(tkForm){
+    tkForm.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      function g(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+      var msg = 'Hola VATATTOOBENE, quiero pedir horario.' +
+        '\nNombre: ' + g('tf-nombre') +
+        (g('tf-wa') ? '\nWhatsApp: ' + g('tf-wa') : '') +
+        '\nZona: ' + g('tf-zona') +
+        '\nTamaño: ' + g('tf-tam') +
+        (g('tf-idea') ? '\nIdea: ' + g('tf-idea') : '');
+      window.open('https://wa.me/56920531438?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    });
+  }
+
+  /* ojos del tigre: encender al tocar el boleto (móvil) */
+  var book = document.getElementById('book-ticket');
+  if(book){
+    book.addEventListener('touchstart', function(){ book.classList.add('lit'); }, {passive:true});
   }
 })();
 </script>

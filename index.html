@@ -192,23 +192,6 @@
   h2.sec{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,5vw,4.6rem);line-height:.95;text-align:center}
   .sec-sub{font-family:var(--serif);font-style:italic;color:var(--grey);text-align:center;font-size:1.05rem;margin-top:.6rem}
 
-  /* FLASH editorial */
-  .flist{margin-top:3rem;border-bottom:1px solid var(--border)}
-  .frow{display:grid;grid-template-columns:64px 1fr auto auto;gap:20px;align-items:center;padding:24px 12px;
-    border-top:1px solid var(--border);text-decoration:none;color:var(--white);transition:background .25s}
-  .frow:hover{background:rgba(201,168,76,.07)}
-  .frow .n{font-size:.68rem;letter-spacing:.2em;color:var(--gold)}
-  .frow h3{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3.4vw,2.6rem);letter-spacing:.04em}
-  .frow h3 em{font-family:var(--serif);font-style:italic;font-size:.85em;color:var(--grey)}
-  .frow .z{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);text-align:right}
-  .frow .go{font-size:.68rem;letter-spacing:.14em;color:var(--gold);white-space:nowrap}
-  @media(max-width:640px){.frow{grid-template-columns:50px 1fr auto}.frow .z{display:none}}
-  #preview{position:fixed;z-index:80;width:230px;height:280px;pointer-events:none;opacity:0;transform:scale(.93) rotate(-2deg);
-    transition:opacity .25s,transform .25s;background:#101012;border:1px solid var(--gold);display:grid;place-items:center}
-  #preview.on{opacity:1;transform:scale(1) rotate(-2deg)}
-  #preview svg{width:68%;height:68%}
-  #preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;background:#101012;padding:0}
-
   /* EQUIPO — personalidad VATATTOOBENE */
   .team{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
   @media(max-width:900px){.team{grid-template-columns:1fr 1fr}}
@@ -568,10 +551,6 @@
     .lang button{padding:.3rem .65rem}
     .wrap{padding:0 16px}
     .eyebrow{letter-spacing:.22em}
-    .flist{margin-top:2rem}
-    .frow{grid-template-columns:44px 1fr auto;gap:12px;padding:18px 6px}
-    .frow h3{font-size:clamp(1.25rem,6vw,1.6rem)}
-    .frow .go{font-size:.6rem}
     .artist{margin-top:2rem}
     .abody{padding:24px 20px}
     .abody h3{font-size:clamp(2rem,10vw,2.6rem)}
@@ -592,7 +571,6 @@
     .wa-float{width:60px;height:60px;bottom:.9rem;left:auto;right:.9rem}
     .wa-float > svg:not(.ring){width:22px;height:22px}
     .wa-float svg.ring text{font-size:12px}
-    #preview{display:none}
   }
 
   /* Móvil chico ≤380px */
@@ -622,8 +600,6 @@
 <body>
 
 <div class="grain" aria-hidden="true"></div>
-<div id="preview" aria-hidden="true"></div>
-
 <nav>
   <button class="burger" onclick="document.getElementById('mmenu').classList.toggle('open')" aria-label="Menú"><span></span><span></span><span></span></button>
   <div class="nright">
@@ -637,7 +613,6 @@
 </nav>
 <div class="mmenu" id="mmenu">
   <a href="#equipo" onclick="document.getElementById('mmenu').classList.remove('open')">Equipo</a>
-  <a href="#flash" onclick="document.getElementById('mmenu').classList.remove('open')">Flash</a>
   <a href="#coverup" onclick="document.getElementById('mmenu').classList.remove('open')">Cover-Up</a>
   <a href="#proceso" onclick="document.getElementById('mmenu').classList.remove('open')">Proceso</a>
   <a href="#reservar" onclick="document.getElementById('mmenu').classList.remove('open')">Reservar</a>
@@ -674,25 +649,9 @@
   <div class="pi rv"><b>3.3K</b><span>Seguidores</span><em>@vatattoobene</em></div>
 </div>
 
-<section id="flash">
-  <div class="wrap">
-    <span class="eyebrow">02 — Flash disponible</span>
-    <h2 class="sec">Piezas que existen <em style="font-family:var(--serif);font-style:italic;color:var(--grey)">una vez</em></h2>
-    <p class="sec-sub" data-es="Cada flash se tatúa una sola vez. Cuando se va, se va." data-en="Each flash gets tattooed once. When it's gone, it's gone.">Cada flash se tatúa una sola vez. Cuando se va, se va.</p>
-    <div class="flist" id="flist" style="margin-top:2.5rem">
-      <a class="frow rv" href="#reservar" data-art="s1"><span class="n">Nº001</span><h3>Serpiente <em>de agua</em></h3><span class="z">Antebrazo — 18 cm</span><span class="go">Reservar →</span></a>
-      <a class="frow rv" href="#reservar" data-art="s2"><span class="n">Nº002</span><h3>Sol <em>negro</em></h3><span class="z">Hombro — 12 cm</span><span class="go">Reservar →</span></a>
-      <a class="frow rv" href="#reservar" data-art="s3"><span class="n">Nº003</span><h3>Botánica <em>mínima</em></h3><span class="z">Muñeca — 7 cm</span><span class="go">Reservar →</span></a>
-      <a class="frow rv" href="#reservar" data-art="s4"><span class="n">Nº004</span><h3>Luna <em>en cuarto</em></h3><span class="z">Costilla — 10 cm</span><span class="go">Reservar →</span></a>
-      <a class="frow rv" href="#reservar" data-art="s5"><span class="n">Nº005</span><h3>Daga <em>y ojo</em></h3><span class="z">Brazo — 15 cm</span><span class="go">Reservar →</span></a>
-      <a class="frow rv" href="#reservar" data-art="s6"><span class="n">Nº006</span><h3>Arco <em>tenso</em></h3><span class="z">Pecho — 20 cm</span><span class="go">Reservar →</span></a>
-    </div>
-  </div>
-</section>
-
 <section id="fundador" style="padding-top:2rem">
   <div class="wrap">
-    <span class="eyebrow">03 — La mano fundadora</span>
+    <span class="eyebrow">02 — La mano fundadora</span>
     <h2 class="sec">Un criterio, <em style="font-family:var(--serif);font-style:italic;color:var(--grey)">doce manos</em></h2>
     <div class="artist rv">
       <div class="aphoto"><img decoding="async" src="assets/tinta-proceso.jpg" alt="Bene trabajando" loading="lazy" onerror="this.onerror=null;this.src='assets/img/tattoo-fallback.svg'"><span class="mono">B.</span><span class="cap" data-es="Foto referencial" data-en="Reference photo">Foto referencial</span></div>
@@ -713,7 +672,7 @@
 
 <section id="coverup" style="padding-top:2rem">
   <div class="wrap">
-    <span class="eyebrow">04 — Segunda oportunidad</span>
+    <span class="eyebrow">03 — Segunda oportunidad</span>
     <div class="cover rv">
       <div class="cover-in">
         <div class="cover-txt">
@@ -733,7 +692,7 @@
 
 <section id="proceso" style="padding-top:2rem">
   <div class="wrap">
-    <span class="eyebrow">05 — Cómo se mueve</span>
+    <span class="eyebrow">04 — Cómo se mueve</span>
     <h2 class="sec">De la idea a la <em style="font-family:var(--serif);font-style:italic;color:var(--grey)">piel curada</em></h2>
     <div class="steps">
       <div class="st rv"><b>01</b><h4>Idea</h4><p>WhatsApp o Instagram: referencias, zona y tamaño.</p><span>Respuesta 24 h</span></div>
@@ -746,7 +705,7 @@
 
 <section id="curadas" style="padding-top:2rem">
   <div class="wrap">
-    <div class="sec-bar"><h2>06 / Curadas <em>— lo que dice Google</em></h2><span class="n">[ 5.0 ★ · 55 reseñas ]</span></div>
+    <div class="sec-bar"><h2>05 / Curadas <em>— lo que dice Google</em></h2><span class="n">[ 5.0 ★ · 55 reseñas ]</span></div>
     <div class="quotes">
       <article class="q rv"><div class="stars">★★★★★</div><p>"Santiago did great job with our Fitz Roy tattoo! Dziękujemy!"</p><footer><b>Viajera de Polonia</b> — Fitz Roy · Google</footer></article>
       <article class="q rv"><div class="stars">★★★★★</div><p>"Santiago es súper amable, nos escuchó y además habla francés. Lo recomendamos."</p><footer><b>Issa Nissa</b> — Francia · Google</footer></article>
@@ -815,7 +774,7 @@
 
 <section id="faq" style="padding-top:2rem">
   <div class="wrap">
-    <div class="sec-bar rv"><h2>07 / Preguntas <em>— antes de la tinta</em></h2><span class="n" data-es="[ FAQ · Valores ]" data-en="[ FAQ · Pricing ]">[ FAQ · Valores ]</span></div>
+    <div class="sec-bar rv"><h2>06 / Preguntas <em>— antes de la tinta</em></h2><span class="n" data-es="[ FAQ · Valores ]" data-en="[ FAQ · Pricing ]">[ FAQ · Valores ]</span></div>
     <div class="faq-grid">
       <div class="rv">
         <h3 class="faq-t" data-es="Valores orientativos" data-en="Reference pricing">Valores orientativos</h3>
@@ -862,7 +821,7 @@
 
 <section id="visita" style="padding-top:2rem">
   <div class="wrap">
-    <div class="sec-bar rv"><h2>08 / Ubicación <em>— el estudio</em></h2><span class="n" data-es="[ Solo con cita ]" data-en="[ Appointment only ]">[ Solo con cita ]</span></div>
+    <div class="sec-bar rv"><h2>07 / Ubicación <em>— el estudio</em></h2><span class="n" data-es="[ Solo con cita ]" data-en="[ Appointment only ]">[ Solo con cita ]</span></div>
     <div class="map-grid">
       <div class="map-info rv">
         <h3 data-es="Te esperamos en la silla" data-en="Waiting for you in the chair">Te esperamos en la silla</h3>
@@ -882,7 +841,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div><img class="flogo" src="assets/img/logo-footer.png" alt="VATATTOOBENE — tigre de ojos ámbar, logo del estudio" width="520" height="293" loading="lazy" onerror="this.style.display='none'"><p style="margin-top:1.1rem;max-width:30ch" data-es="Estudio boutique — Providencia, Santiago. Línea fina · Blackwork · Cover-up." data-en="Boutique studio — Santiago, Chile. Fine-line · Blackwork · Cover-up.">Estudio boutique — Providencia, Santiago. Línea fina · Blackwork · Cover-up.</p></div>
-      <div class="fcol"><b data-es="Navegar" data-en="Browse">Navegar</b><a href="#equipo" data-es="Equipo" data-en="Crew">Equipo</a><a href="#flash">Flash</a><a href="#coverup">Cover-Up</a><a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a><a href="#reservar" data-es="Reservar" data-en="Book">Reservar</a><a href="#faq">FAQ</a><a href="#visita" data-es="Ubicación" data-en="Location">Ubicación</a></div>
+      <div class="fcol"><b data-es="Navegar" data-en="Browse">Navegar</b><a href="#equipo" data-es="Equipo" data-en="Crew">Equipo</a><a href="#coverup">Cover-Up</a><a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a><a href="#reservar" data-es="Reservar" data-en="Book">Reservar</a><a href="#faq">FAQ</a><a href="#visita" data-es="Ubicación" data-en="Location">Ubicación</a></div>
       <div class="fcol"><b>Contacto</b><a href="https://wa.me/56920531438" target="_blank" rel="noopener">+56 9 2053 1438</a><a href="https://www.instagram.com/vatattoobene/" target="_blank" rel="noopener">@vatattoobene</a><p>José Arrieta 96, Santiago<br>Lun–Dom 11:00–20:00 · Solo con cita</p></div>
     </div>
     <div class="legal"><span>© 2026 Vatattoobene — Santiago, Chile</span><span>Tatuaje fine-line · Blackwork · Cover-up Santiago</span></div>
@@ -994,30 +953,6 @@
     var a = card.querySelector('.mbtn-port');
     if(a) window.location.href = a.href;
   });
-
-  /* hover preview del flash */
-  var fine = matchMedia('(pointer:fine)').matches;
-  var prev = document.getElementById('preview');
-  var IMG = 'assets/';
-  var flashArts = { s1:IMG+'tinta-brazo.jpg', s2:IMG+'tinta-sesion.jpg', s3:IMG+'tinta-dedo.jpg', s4:IMG+'tinta-mini.jpg', s5:IMG+'tinta-proceso.jpg', s6:IMG+'tinta-estudio.jpg' };
-  if(fine){
-    var px=0, py=0, tx=0, ty=0, raf=null;
-    function loop(){
-      px += (tx-px)*.14; py += (ty-py)*.14;
-      prev.style.left = (px+26)+'px'; prev.style.top = (py-140)+'px';
-      if(prev.classList.contains('on')) raf = requestAnimationFrame(loop); else raf = null;
-    }
-    document.querySelectorAll('.frow').forEach(function(row){
-      row.addEventListener('mouseenter', function(e){
-        prev.innerHTML = flashArts[row.dataset.art] ? '<img decoding="async" src="' + flashArts[row.dataset.art] + '" alt="Flash" onerror="this.onerror=null;this.src=\'assets/img/tattoo-fallback.svg\'">' : '';
-        prev.classList.add('on');
-        tx=e.clientX; ty=e.clientY; px=tx; py=ty;
-        if(!raf) raf = requestAnimationFrame(loop);
-      });
-      row.addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; });
-      row.addEventListener('mouseleave', function(){ prev.classList.remove('on'); });
-    });
-  }
 
   /* boleto → WhatsApp con mensaje pre-llenado */
   var tkForm = document.getElementById('tk-form');

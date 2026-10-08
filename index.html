@@ -237,6 +237,42 @@
     border-radius:8px;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:.25s}
   .mbtn-wa:hover{border-color:var(--green);color:#fff;background:rgba(37,211,102,.12)}
 
+  /* POR QUE + CTA pieza */
+  .why{padding:4.2rem 0 0}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  @media(max-width:940px){.why-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
+  .wcard{background:linear-gradient(180deg,#1a1611,#111010);border:1px solid #2b251d;border-radius:12px;padding:10px 10px 1.25rem;
+    transition:border-color .3s,transform .3s,box-shadow .3s}
+  .wcard:hover{border-color:rgba(201,168,76,.55);transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.55),0 0 0 1px rgba(201,168,76,.3)}
+  .wphoto{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:#0c0b09;border:1px solid rgba(226,205,160,.3)}
+  .wphoto::after{content:'';position:absolute;inset:5px;border:1px solid rgba(226,205,160,.25);border-radius:5px;pointer-events:none;z-index:2}
+  .wphoto img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.22) saturate(.9) contrast(1.05) brightness(.94);transition:transform .6s ease}
+  .wcard:hover .wphoto img{transform:scale(1.05)}
+  .wcard h3{font-family:var(--display);font-weight:400;font-size:1.02rem;letter-spacing:.16em;text-transform:uppercase;color:#ecdfc3;
+    margin:1rem .4rem .45rem;line-height:1.2}
+  .wcard h3 .wdash{color:var(--gold);margin-right:.45rem}
+  .wcard p{font-size:.8rem;line-height:1.6;color:var(--grey);margin:0 .4rem}
+  .piece-cta{position:relative;margin-top:1.2rem;border-radius:16px;overflow:hidden;border:1px solid rgba(201,168,76,.32);
+    background:#0c0a07;padding:clamp(2.8rem,5vw,4.4rem) 1.5rem;text-align:center}
+  .piece-cta::before{content:'';position:absolute;inset:0;background:url('assets/img/cta-marble.jpg') center/cover no-repeat;opacity:.55;z-index:0}
+  .piece-cta::after{content:'';position:absolute;inset:0;z-index:0;
+    background:radial-gradient(ellipse at 50% 45%,rgba(10,8,5,.40) 0%,rgba(10,8,5,.60) 55%,rgba(10,8,5,.88) 80%)}
+  .pc-in{position:relative;z-index:1}
+  .pc-title{font-family:var(--display);font-weight:400;font-size:clamp(2.1rem,4.6vw,3.5rem);color:#f0e6cf;letter-spacing:.03em;line-height:1.08;margin:0}
+  .pc-title .pc-it{font-family:var(--serif);font-style:italic;color:var(--gold-l);letter-spacing:.01em}
+  .pc-sub{max-width:54ch;margin:1.1rem auto 0;font-size:.88rem;line-height:1.65;color:#cfc4ab}
+  .pc-btns{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+  .pc-wa{display:inline-flex;align-items:center;gap:.6rem;background:rgba(12,11,8,.82);border:1px solid rgba(255,255,255,.18);color:#f0ead8;
+    padding:.9rem 1.6rem;border-radius:10px;font-family:var(--display);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+    text-decoration:none;transition:.25s}
+  .pc-wa svg{width:18px;height:18px;fill:var(--green);flex:none}
+  .pc-wa:hover{border-color:var(--green);background:rgba(37,211,102,.14);transform:translateY(-2px)}
+  .pc-team{display:inline-flex;align-items:center;background:linear-gradient(180deg,#dcc388,#bd9d55);color:#191304;
+    padding:.9rem 1.6rem;border-radius:10px;font-family:var(--display);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;
+    text-decoration:none;border:1px dashed rgba(25,19,4,.55);box-shadow:0 10px 26px rgba(0,0,0,.4),0 0 0 1px rgba(201,168,76,.35);transition:.25s}
+  .pc-team:hover{filter:brightness(1.08);transform:translateY(-2px)}
+  @media(max-width:560px){.pc-btns{flex-direction:column;align-items:stretch}.pc-wa,.pc-team{justify-content:center}}
+
   /* MODAL portfolio personal */
   dialog{border:1px solid var(--gold);background:#101012;color:var(--white);border-radius:16px;max-width:640px;width:92vw;padding:0}
   dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
@@ -626,6 +662,38 @@
     </div>
   </div>
 </header>
+
+<section class="why" aria-label="Por qué VATATTOOBENE">
+  <div class="wrap">
+    <div class="why-grid">
+      <article class="wcard rv">
+        <div class="wphoto"><img decoding="async" src="assets/img/why-dibujo.jpg" alt="Máquina de tatuar sobre bocetos a lápiz" loading="lazy" onerror="this.remove()"></div>
+        <h3><span class="wdash">&mdash;</span><span data-es="Dibujo único" data-en="Original drawing">Dibujo único</span></h3>
+        <p data-es="Nada de flashes repetidos. Bocetos personalizados para tu cuerpo, ajustados hasta tu firma." data-en="No flash repeats. Custom sketches for your body, refined until they carry your signature.">Nada de flashes repetidos. Bocetos personalizados para tu cuerpo, ajustados hasta tu firma.</p>
+      </article>
+      <article class="wcard rv">
+        <div class="wphoto"><img decoding="async" src="assets/img/why-curado.jpg" alt="Productos de curado sobre bandeja de madera" loading="lazy" onerror="this.remove()"></div>
+        <h3><span class="wdash">&mdash;</span><span data-es="Curado acompañado" data-en="Guided healing">Curado acompañado</span></h3>
+        <p data-es="Seguimiento y asesoría en los días 7 y 30. Retoque incluido si la piel lo necesita." data-en="Follow-up and advice on days 7 and 30. Touch-up included if your skin needs it.">Seguimiento y asesoría en los días 7 y 30. Retoque incluido si la piel lo necesita.</p>
+      </article>
+      <article class="wcard rv">
+        <div class="wphoto"><img decoding="async" src="assets/img/why-diagnostico.jpg" alt="Calibre digital, balanza y lupa sobre mesa de trabajo" loading="lazy" onerror="this.remove()"></div>
+        <h3><span class="wdash">&mdash;</span><span data-es="Diagnóstico honesto" data-en="Honest diagnosis">Diagnóstico honesto</span></h3>
+        <p data-es="Cobertura real y viable en cover-ups. Equilibrio visual a largo plazo. Transparencia total." data-en="Real, viable cover-up coverage. Long-term visual balance. Total transparency.">Cobertura real y viable en cover-ups. Equilibrio visual a largo plazo. Transparencia total.</p>
+      </article>
+    </div>
+    <div class="piece-cta rv">
+      <div class="pc-in">
+        <h2 class="pc-title"><span class="pc-big" data-es="¿Trabajamos" data-en="Shall we work">¿Trabajamos</span> <em class="pc-it" data-es="tu pieza?" data-en="your piece?">tu pieza?</em></h2>
+        <p class="pc-sub" data-es="Cuéntanos tu idea, zona y tamaño aproximado. Recibirás una respuesta honesta y un diagnóstico en 24 horas." data-en="Tell us your idea, placement and approximate size. You'll get an honest answer and a diagnosis within 24 hours.">Cuéntanos tu idea, zona y tamaño aproximado. Recibirás una respuesta honesta y un diagnóstico en 24 horas.</p>
+        <div class="pc-btns">
+          <a class="pc-wa" href="https://wa.me/56920531438?text=Hola%20VATATTOOBENE%2C%20quiero%20cotizar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-es="Cotizar por WhatsApp" data-en="Quote via WhatsApp">Cotizar por WhatsApp</span></a>
+          <a class="pc-team" href="#equipo"><span data-es="Ver todo el equipo" data-en="Meet the full team">Ver todo el equipo</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="equipo">
   <div class="wrap">

@@ -56,35 +56,39 @@
   h2 em{font-family:var(--serif);font-style:italic;color:var(--grey);font-size:.85em}
   .bio{color:var(--grey);font-size:1rem;max-width:62ch;margin-top:1rem}
   .bio strong{color:var(--white);font-weight:500}
-  .drag-hint{margin-top:2.2rem;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
-  .works{margin-top:1rem;display:flex;gap:1rem;overflow-x:auto;padding-bottom:1.2rem;cursor:grab;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-  .works::-webkit-scrollbar{display:none}
-  .works.dragging{cursor:grabbing;scroll-snap-type:none}
-  .works img{-webkit-user-drag:none;user-select:none}
-  .w{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#0b0b0d;flex:0 0 auto;scroll-snap-align:start;width:min(420px,85vw);max-width:min(560px,85vw)}
+  .works{margin-top:2.2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  @media(max-width:940px){.works{grid-template-columns:repeat(2,1fr)}}
+  .w{position:relative;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#0b0b0d;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+  .w:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.55);box-shadow:0 18px 40px -18px rgba(0,0,0,.8)}
   .w figure{margin:0;display:grid}
-  .w figure > img{width:100%;aspect-ratio:4/5;height:auto;object-fit:cover;object-position:center center;display:block;background:#0b0b0d;cursor:zoom-in;margin:0 auto}
-  .w figcaption{min-height:46px;padding:.9rem 1.1rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--border);background:#101012}
+  .w figure > img{width:100%;aspect-ratio:4/5;height:auto;object-fit:cover;object-position:center center;display:block;background:#0b0b0d;cursor:zoom-in;margin:0 auto;transition:transform .5s ease,filter .5s ease}
+  .w:hover figure > img{transform:scale(1.045);filter:brightness(1.07)}
+  .w figcaption{min-height:46px;padding:.9rem 1.1rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--border);background:#101012;display:flex;align-items:center}
+  @media(max-width:520px){.w figcaption{padding:.7rem .8rem;font-size:.56rem;letter-spacing:.14em;min-height:38px}}
   #zoom{padding:0;background:rgba(5,5,6,.96);border:1px solid var(--gold);border-radius:14px;max-width:min(920px,94vw)}
   #zoom::backdrop{background:rgba(0,0,0,.82)}
   #zoom img{display:block;max-width:min(920px,94vw);max-height:86vh;object-fit:contain;object-position:center center;cursor:zoom-out}
   #zoom .zcap{padding:.8rem 1.2rem;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:center}
   .w figcaption b{color:var(--gold);font-weight:400;margin-right:.6rem}
-  .focus{margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  .focus{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
   @media(max-width:760px){.focus{grid-template-columns:1fr}}
-  .f{padding:1.8rem 1.5rem;border-left:1px solid var(--border)}
-  .f:first-child{border-left:none}
-  @media(max-width:760px){.f{border-left:none;border-top:1px solid var(--border)}.f:first-child{border-top:none}}
-  .f b{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.05em;display:block;margin-bottom:.5rem}
-  .f b i{color:var(--gold);font-style:normal;margin-right:.5rem}
-  .f p{font-size:.82rem;color:var(--grey)}
-  .book{margin-top:4rem;background:var(--white);color:#0a0a0a;border-radius:14px;padding:clamp(2.2rem,5vw,3.6rem);text-align:center}
-  .book h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+  .f{position:relative;padding:1.9rem 1.6rem;border:1px solid var(--border);border-radius:12px;
+    background:linear-gradient(155deg,rgba(201,168,76,.07),rgba(201,168,76,0) 52%),#121214;
+    transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+  .f:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.5);box-shadow:0 16px 36px -16px rgba(0,0,0,.85)}
+  .f b{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.05em;display:block;margin-bottom:.55rem}
+  .f b i{color:var(--gold);font-style:normal;margin-right:.55rem;letter-spacing:.08em}
+  .f p{font-size:.84rem;line-height:1.65;color:var(--grey)}
+  .book{position:relative;margin-top:4.5rem;background:linear-gradient(150deg,#f6f1e6,#e8e1cf);color:#0a0a0a;border:1px solid var(--gold);border-radius:16px;padding:clamp(2.4rem,5vw,3.8rem);text-align:center;box-shadow:0 26px 60px -28px rgba(201,168,76,.35);overflow:hidden}
+  .book::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(62% 90% at 50% 0%,rgba(201,168,76,.16),transparent 70%)}
+  .book h2{font-size:clamp(2.4rem,6vw,4.6rem);position:relative}
   .book h2 em{font-family:var(--serif);font-style:italic}
-  .book p{color:#444;margin:.8rem auto 0;max-width:50ch}
-  .book .row{display:flex;gap:.8rem;justify-content:center;margin-top:1.8rem;flex-wrap:wrap}
-  .b-wa{background:var(--green);color:#fff;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500}
-  .b-ig{border:1px solid #0a0a0a;color:#0a0a0a;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+  .book p{color:#444;margin:.8rem auto 0;max-width:50ch;position:relative}
+  .book .row{display:flex;gap:.8rem;justify-content:center;margin-top:1.8rem;flex-wrap:wrap;position:relative}
+  .b-wa{background:var(--green);color:#fff;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:transform .25s,background .25s,box-shadow .25s}
+  .b-wa:hover{background:#20ba5a;transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(37,211,102,.55)}
+  .b-ig{border:1px solid #0a0a0a;color:#0a0a0a;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:transform .25s,background .25s,color .25s}
+  .b-ig:hover{background:#0a0a0a;color:var(--white);transform:translateY(-2px)}
   footer{border-top:1px solid var(--border);margin-top:4rem;padding:2.5rem 0;font-size:.62rem;letter-spacing:.14em;color:#4a4a48;text-transform:uppercase}
   .foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   .foot a{color:var(--grey);text-decoration:none}
@@ -116,9 +120,8 @@
     <span class="eyebrow">Portfolio — piezas recientes</span>
     <h2>El trabajo <em>habla solo.</em></h2>
     <p class="bio"><strong>Diseños propios y piezas personalizadas.</strong> Tatuajitos con intención, hechos con calma y buena onda.</p>
-    <div class="drag-hint">Arrastra para explorar →</div>
     <div class="works"><div class="w"><figure><img decoding="async" src="../assets/ig/vrintattoo-0.jpg" alt="Trabajo de VRIN 1" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.01</b>Muchas gracias por confiarme este tatuaje! 🙏🏻💗".</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/vrintattoo-1.jpg" alt="Trabajo de VRIN 2" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.02</b>Tenía muchas ganas de tatuar este galgo! Muchas gracias por la confianza 🙏🏻…</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/vrintattoo-2.jpg" alt="Trabajo de VRIN 3" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.03</b>Tatuajito personalizado de hace un tiempo 💗 muchas gracias por la confianza…</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/vrintattoo-3.jpg" alt="Trabajo de VRIN 4" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.04</b>De verdad que no les puedo explicar lo feliz que me hace ver esto terminado…</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/vrintattoo-4.jpg" alt="Trabajo de VRIN 5" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.05</b>Uno de mis diseños 🤍 muchas gracias por confiarme tu bracito!! 🙏🏻".</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/vrintattoo-5.jpg" alt="Trabajo de VRIN 6" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.06</b>Agradecida por la confianza 💗 Con disponibilidad en julio para tatuarte!! s…</figcaption></figure></div></div>
-    <div class="focus"><div class="f"><b><i>—</i>Diseño propio</b><p>Flash y piezas únicas salidas de su cuaderno.</p></div><div class="f"><b><i>—</i>Personalizado</b><p>Tu idea, adaptada a tu cuerpo.</p></div><div class="f"><b><i>—</i>Buena experiencia</b><p>Sesión tranquila, trato cercano.</p></div></div>
+    <div class="focus"><div class="f"><b><i>01</i>Diseño propio</b><p>Flash y piezas únicas salidas de su cuaderno.</p></div><div class="f"><b><i>02</i>Personalizado</b><p>Tu idea, adaptada a tu cuerpo.</p></div><div class="f"><b><i>03</i>Buena experiencia</b><p>Sesión tranquila, trato cercano.</p></div></div>
     <div class="book rv">
       <h2>¿Trabajamos <em>tu pieza?</em></h2>
       <p>Escríbeme con tu idea, zona y tamaño. Respuesta honesta en 24 horas.</p>
@@ -131,17 +134,12 @@
 </section>
 <dialog id="zoom"><img decoding="async" id="zoom-img" src="" alt="Ampliación del trabajo"><div class="zcap" id="zoom-cap"></div></dialog>
 <footer>
-  <div class="wrap foot"><span>© 2026 Vatattoobene — Vrin</span><a href="../index.html#equipo">← Volver al equipo</a></div>
+  <div class="wrap foot"><span>© 2026 Vatattoobene — Vrin</span><a href="https://www.instagram.com/vrintattoo/" target="_blank" rel="noopener">Instagram ↗</a><a href="../index.html#equipo">← Volver al equipo</a></div>
 </footer>
 <script>
 (function(){"use strict";
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-var rail=document.querySelector('.works');
-if(rail){var dn=false,sx=0,sl=0;
-rail.addEventListener('pointerdown',function(e){dn=true;sx=e.clientX;sl=rail.scrollLeft;rail.classList.add('dragging');try{rail.setPointerCapture(e.pointerId)}catch(_){}});
-rail.addEventListener('pointermove',function(e){if(!dn)return;rail.scrollLeft=sl-(e.clientX-sx)});
-['pointerup','pointercancel','pointerleave'].forEach(function(ev){rail.addEventListener(ev,function(){dn=false;rail.classList.remove('dragging')})});}
 var zg=document.getElementById('zoom');
 if(zg){document.querySelectorAll('.w img').forEach(function(im){
 im.addEventListener('click',function(){

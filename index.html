@@ -362,6 +362,17 @@
   .b-bk svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:1.8}
   .book small{position:relative;display:block;margin-top:.4rem;font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#6b6350}
 
+  /* Título de reserva — fuera del boleto en pantallas grandes */
+  .res-head{display:none;text-align:center}
+  .res-head .eyebrow{margin-bottom:.7rem}
+  .res-title{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4vw,3.4rem);line-height:.95;
+    letter-spacing:.015em;color:var(--white);text-transform:uppercase;margin:0}
+  @media(min-width:761px){
+    .res-head{display:block;margin-top:3.2rem}
+    .book{margin-top:1.2rem}
+    .book h2{display:none}
+  }
+
   /* OJOS DEL TIGRE — brillo ámbar al hover / al enfocar el boleto */
   .tk-eyes{position:absolute;top:0;left:0;width:100%;aspect-ratio:1365/768;z-index:1;pointer-events:none;opacity:0;transition:opacity .55s ease}
   .book:hover .tk-eyes,.book:focus-within .tk-eyes,.book.lit .tk-eyes{opacity:1}
@@ -745,6 +756,10 @@
 
 <section id="reservar" style="padding-top:2rem">
   <div class="wrap">
+    <div class="res-head rv">
+      <span class="eyebrow" data-es="Reserva tu cita" data-en="Book your session">Reserva tu cita</span>
+      <h2 class="res-title" data-es="TU TURNO EN LA SILLA." data-en="YOUR TURN IN THE CHAIR.">TU TURNO EN LA SILLA.</h2>
+    </div>
     <div class="book rv" id="book-ticket" role="region" aria-label="Reserva tu cita en VATATTOOBENE">
       <img class="tk-photo" src="assets/img/book-ticket.jpg" alt="Ticket vintage de VATATTOOBENE — papel envejecido, logo chicano y tigre de ojos ámbar" loading="lazy" onerror="this.style.display='none'">
       <div class="tk-inner">

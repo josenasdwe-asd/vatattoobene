@@ -1,0 +1,73 @@
+# MANIFEST — assets/ig (VATATTOOBENE)
+
+> **IMPORTANTE**: Estas imágenes son **referenciales** (fotos web de tatuajes acordes al estilo declarado de cada artista).
+> Instagram bloquea el scraping sin login, por lo que no fue posible descargar el trabajo real de cada @ desde el entorno de trabajo.
+> Para reemplazar: guarda la foto real con el mismo nombre de archivo (misma ruta) y listo — no hay que tocar código.
+
+- `santiarts-0.jpg` ← OCD Ink Studio (900x1200) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/03f0a74faaa4.jpg
+- `santiarts-2.jpg` ← 1MM Tattoo Studio (1080x1350) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a68dd3b60cb4.jpg
+- `santiarts-3.jpg` ← H2M Tattoo Studio (736x1104) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7a2aa545113f.jpg
+- `santiarts-4.jpg` ← EZINK (1280x1618) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c24533d90757.jpg
+- `santiarts-5.jpg` ← Removery Tattoo Removal (1201x801) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dc68f2d4dfdd.jpg
+- `negro_ttt-0.jpg` ← OCD Ink Studio (1200x1599) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8aedc7f3d03c.jpg
+- `negro_ttt-1.jpg` ← K4 Henna (700x1244) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fe0288f90d33.webp
+- `negro_ttt-2.jpg` ← Love Machine - Tattoo shop New York (1080x1350) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bb007f839dd7.jpg
+- `negro_ttt-3.jpg` ← OMEN Tattoo (975x975) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ae93914faed8.jpeg
+- `negro_ttt-4.jpg` ← OMEN Tattoo (1080x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/24a426638405.jpg
+- `negro_ttt-5.jpg` ← Hon Tattoo Studio (980x1307) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/06b8f72a0220.jpg
+- `daniel_zahav-0.jpg` ← Tattoofilter (1000x1000) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ab607fbcda4b.jpg
+- `daniel_zahav-1.jpg` ← Sun Tattoo (1080x1616) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/de33d84fc389.jpg
+- `daniel_zahav-2.jpg` ← Pinterest (736x1172) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a1dc99f95478.jpg
+- `daniel_zahav-3.jpg` ← NOBLE ART OFFICIAL COORP (886x1170) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/887042ac6d25.png
+- `daniel_zahav-4.jpg` ← Sun Tattoo (1600x2133) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1fe3bcb3c9cd.jpg
+- `daniel_zahav-5.jpg` ← Tattoofilter (1000x1000) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/31b5eec70ab9.jpg
+- `vrintattoo-0.jpg` ← Lemon8 (1440x1922) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0d577c10e347.jpg
+- `vrintattoo-1.jpg` ← Reddit (736x1129) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a2fce38287c7.jpg
+- `vrintattoo-2.jpg` ← Tattoodo (1080x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/df666c4fdc07.jpg
+- `vrintattoo-3.jpg` ← Tattoofilter (1000x1000) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/faf52e38eb38.jpg
+- `vrintattoo-4.jpg` ← iNKPPL (1000x1500) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7697c9be1633.jpg
+- `vrintattoo-5.jpg` ← BHORN Tattoo (1127x1595) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1c3bb380390b.jpg
+- `nigaitattoo-0.jpg` ← Pinterest (736x1104) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2efecddc54e2.jpg
+- `nigaitattoo-2.jpg` ← Melissa Jane Lee - (870x1310) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/308ef81e95b2.jpg
+- `nigaitattoo-3.jpg` ← Tattoo Build (816x1456) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7fb38d19f894.jpg
+- `chiwiblacktattoo-0.jpg` ← Tattoodo (1440x1800) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f00dfd608759.jpg
+- `chiwiblacktattoo-1.jpg` ← Pinterest (723x1350) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e19dfd16534d.jpg
+- `chiwiblacktattoo-2.jpg` ← Love Machine - Tattoo shop New York (1080x1350) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/08b76efc29cc.jpg
+- `chiwiblacktattoo-3.jpg` ← Dragon King Tattoo (819x1024) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/227a52f1bbc2.jpg
+- `chiwiblacktattoo-4.jpg` ← Reddit (1206x1455) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/30ae0b99c7f6.jpg
+- `bycatatts_-0.jpg` ← Temporary Tattoos (1080x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f6257724f56f.jpg
+- `bycatatts_-1.jpg` ← OCD Ink Studio (1200x1497) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/0304ffc088e5.jpg
+- `bycatatts_-3.jpg` ← Amazon UK (1500x1500) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a79d0e3731c7.jpg
+- `bycatatts_-4.jpg` ← Tattoo Life (1160x1366) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ddf7777b7d7f.jpg
+- `bycatatts_-5.jpg` ← Medium (2022x2527) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cf234b26cae9.jpeg
+- `mertvynk-1.jpg` ← cocreate.ink (2260x1272) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7acd253f65ce.png
+- `mertvynk-2.jpg` ← VectorStock (911x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/77b7a1d938d9.jpg
+- `mertvynk-3.jpg` ← ServingSomeLines (1600x1067) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/414db98b2ae2.jpg
+- `mertvynk-5.jpg` ← 123RF (919x1300) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2a239bb7cf1c.jpg
+- `fionainks-0.jpg` ← K4 Henna (700x1244) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e809d12e33d1.webp
+- `fionainks-1.jpg` ← kr.pinterest.com (736x1104) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/3f5b553fe1a5.jpg
+- `fionainks-2.jpg` ← Etsy (1024x1074) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/e16787951782.jpg
+- `fionainks-3.jpg` ← Glamour (2560x1440) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/d01a4a3163c5.jpg
+- `fionainks-4.jpg` ← K4 Henna (700x1244) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f455fbdaf934.webp
+- `fionainks-5.jpg` ← tathood (1200x1600) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7c094ad75a37.jpg
+- `david_vrvyv-0.jpg` ← Blackwork Tattoo Studio in Bristol | Si Tattoos (1200x1600) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/577bdf3a5523.jpg
+- `david_vrvyv-3.jpg` ← Tattoo Build (1024x1024) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7e19d6255099.jpg
+- `david_vrvyv-4.jpg` ← Tattoodo (968x1452) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/edb3e27344c3.png
+- `david_vrvyv-5.jpg` ← Ink Happened (1080x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6d1ca87cd7d9.jpg
+- `demoniart-0.jpg` ← ServingSomeLines (2160x2700) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/964a848c7bc4.jpg
+- `demoniart-1.jpg` ← Adobe Stock (1000x1000) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/36fe049d18ba.jpg
+- `demoniart-2.jpg` ← VectorStock (1000x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/92d5dfd8fecd.jpg
+- `demoniart-3.jpg` ← VectorStock (1000x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/649edd0681d8.jpg
+- `demoniart-4.jpg` ← Alamy (1300x1390) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bc678bf87ed0.jpg
+- `demoniart-5.jpg` ← Amazon.com (1994x1994) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4144cb672de9.jpg
+- `micky_artt-0.jpg` ← kr.pinterest.com (736x1307) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5aec9db93ba7.jpg
+- `micky_artt-2.jpg` ← Pinterest (736x1308) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/4100ff48ea2a.jpg
+- `micky_artt-3.jpg` ← Cultura Colectiva (1242x1843) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/29f7adac0566.jpg
+- `micky_artt-4.jpg` ← Pinterest (736x1104) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fbd355fc002f.jpg
+- `micky_artt-5.jpg` ← Temporary Little Tattoos (1000x1000) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7481e887c7a6.jpg
+- `tinta-proceso.jpg` ← The Overlook News (2000x1335) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f2e5779bde1b.jpg
+- `tinta-sesion.jpg` ← Alamy (1300x956) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5b271dea9bef.jpg
+- `tinta-brazo.jpg` ← Reddit (2252x1999) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/cf1a5aa77db4.jpg
+- `tinta-dedo.jpg` ← Reddit (3024x4032) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/75afecbe02b1.jpg
+- `tinta-mini.jpg` ← Etsy (1080x1573) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bbaefec15c5b.jpg
+- `tinta-estudio.jpg` ← Tripadvisor (1200x974) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/74442a29b7fd.jpg

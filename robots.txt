@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://josenasdwe-asd.github.io/vatattoobene/sitemap.xml

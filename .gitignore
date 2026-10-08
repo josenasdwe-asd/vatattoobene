@@ -1,0 +1,16 @@
+# Paquete externo pesado (no es parte del sitio)
+empaquete boutique/
+
+# Dependencias y SO
+node_modules/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Metadata del editor
+*.artifact.json
+
+# Capturas temporales
+shot-*.png
+r-*.png
+v-*.png

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DANIEL — Realismo / Microrealismo / Fine-line | VATATTOOBENE</title>
+<meta name="description" content="DANIEL: Realismo / Microrealismo / Fine-line en VATATTOOBENE, Santiago. Portfolio, proceso y reserva directa." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#0a0a0a;--dark:#111;--card:#161616;--border:#232323;--gold:#c9a84c;--gold-l:#e8c97a;
+  --white:#f0ede8;--grey:#888880;--green:#25d366;--display:'Bebas Neue',Impact,sans-serif;
+  --serif:'Cormorant Garamond',Georgia,serif;--body:'Barlow',system-ui,sans-serif}
+  *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--white);font-family:var(--body);font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--gold);color:#000}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+  .grain{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.09;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+  nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;
+    height:60px;padding:0 4vw;background:rgba(10,10,10,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  .brand{font-family:var(--display);font-size:19px;letter-spacing:.1em;color:var(--white);text-decoration:none}
+  .brand b{color:var(--gold);font-weight:400}
+  .back{color:var(--grey);text-decoration:none;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}
+  .back:hover{color:var(--gold)}
+  .hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;padding:120px 0 0;overflow:hidden;
+    background:linear-gradient(rgba(10,10,10,.55),rgba(10,10,10,.94) 85%),url('../assets/ig/daniel_zahav-0.jpg') center/cover no-repeat,url('../assets/img/tattoo-fallback.svg') center/72% no-repeat,var(--black)}
+  .hero-in{padding-bottom:56px;width:100%}
+  .hero-in .loc{font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+  .hero-in h1{font-family:var(--display);font-weight:400;font-size:clamp(80px,15vw,210px);line-height:.88}
+  .hero-in .role{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,2.6vw,1.8rem);color:var(--grey);margin-top:.4rem}
+  .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem}
+  .tags span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--gold);
+    padding:.5rem .95rem;border-radius:999px;color:var(--gold)}
+  .hrow{display:flex;gap:.7rem;margin-top:1.8rem;flex-wrap:wrap}
+  .btn{padding:.95rem 2rem;border-radius:32px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500}
+  .btn-wa{background:var(--green);color:#fff}
+  .btn-wa:hover{background:#20ba5a}
+  .btn-line{border:1px solid var(--border);color:var(--white)}
+  .btn-line:hover{border-color:var(--gold);color:var(--gold)}
+  section{padding:4.5rem 0}
+  .eyebrow{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem}
+  h2{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4.6vw,4rem);line-height:1}
+  h2 em{font-family:var(--serif);font-style:italic;color:var(--grey);font-size:.85em}
+  .bio{color:var(--grey);font-size:1rem;max-width:62ch;margin-top:1rem}
+  .bio strong{color:var(--white);font-weight:500}
+  .drag-hint{margin-top:2.2rem;font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+  .works{margin-top:1rem;display:flex;gap:1rem;overflow-x:auto;padding-bottom:1.2rem;cursor:grab;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .works::-webkit-scrollbar{display:none}
+  .works.dragging{cursor:grabbing;scroll-snap-type:none}
+  .works img{-webkit-user-drag:none;user-select:none}
+  .w{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#0b0b0d;flex:0 0 auto;scroll-snap-align:start;width:min(420px,85vw);max-width:min(560px,85vw)}
+  .w figure{margin:0;display:grid}
+  .w figure > img{width:100%;aspect-ratio:4/5;height:auto;object-fit:cover;object-position:center center;display:block;background:#0b0b0d;cursor:zoom-in;margin:0 auto}
+  .w figcaption{min-height:46px;padding:.9rem 1.1rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--grey);border-top:1px solid var(--border);background:#101012}
+  #zoom{padding:0;background:rgba(5,5,6,.96);border:1px solid var(--gold);border-radius:14px;max-width:min(920px,94vw)}
+  #zoom::backdrop{background:rgba(0,0,0,.82)}
+  #zoom img{display:block;max-width:min(920px,94vw);max-height:86vh;object-fit:contain;object-position:center center;cursor:zoom-out}
+  #zoom .zcap{padding:.8rem 1.2rem;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:center}
+  .w figcaption b{color:var(--gold);font-weight:400;margin-right:.6rem}
+  .focus{margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+  @media(max-width:760px){.focus{grid-template-columns:1fr}}
+  .f{padding:1.8rem 1.5rem;border-left:1px solid var(--border)}
+  .f:first-child{border-left:none}
+  @media(max-width:760px){.f{border-left:none;border-top:1px solid var(--border)}.f:first-child{border-top:none}}
+  .f b{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.05em;display:block;margin-bottom:.5rem}
+  .f b i{color:var(--gold);font-style:normal;margin-right:.5rem}
+  .f p{font-size:.82rem;color:var(--grey)}
+  .book{margin-top:4rem;background:var(--white);color:#0a0a0a;border-radius:14px;padding:clamp(2.2rem,5vw,3.6rem);text-align:center}
+  .book h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+  .book h2 em{font-family:var(--serif);font-style:italic}
+  .book p{color:#444;margin:.8rem auto 0;max-width:50ch}
+  .book .row{display:flex;gap:.8rem;justify-content:center;margin-top:1.8rem;flex-wrap:wrap}
+  .b-wa{background:var(--green);color:#fff;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500}
+  .b-ig{border:1px solid #0a0a0a;color:#0a0a0a;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+  footer{border-top:1px solid var(--border);margin-top:4rem;padding:2.5rem 0;font-size:.62rem;letter-spacing:.14em;color:#4a4a48;text-transform:uppercase}
+  .foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .foot a{color:var(--grey);text-decoration:none}
+  .rv{opacity:0;filter:blur(10px);transform:translateY(18px);transition:opacity .9s ease,filter .9s ease,transform .9s ease}
+  .rv.in{opacity:1;filter:blur(0);transform:none}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;filter:none;transform:none}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<nav>
+  <a class="brand" href="../index.html">VATATTOO<b>BENE</b></a>
+  <a class="back" href="../index.html#equipo">← Volver al equipo</a>
+</nav>
+<header class="hero">
+  <div class="wrap hero-in" style="width:100%">
+    <span class="loc">Providencia — Residente</span>
+    <h1>DANIEL</h1>
+    <p class="role">Realismo / Microrealismo / Fine-line</p>
+    <div class="tags"><span>Realismo</span><span>Microrealismo</span><span>Fine-line</span></div>
+    <div class="hrow">
+      <a class="btn btn-wa" href="https://wa.me/56920531438?text=Hola%20Daniel%2C%20quiero%20cotizar%20una%20pieza%20contigo" target="_blank" rel="noopener">Cotizar con DANIEL →</a>
+      <a class="btn btn-line" href="https://www.instagram.com/daniel_zahav/" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+  </div>
+</header>
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Portfolio — piezas recientes</span>
+    <h2>El trabajo <em>habla solo.</em></h2>
+    <p class="bio"><strong>Realismo, microrealismo y línea fina.</strong> Del retrato al tigre: detalle que se lee de cerca y aguanta de lejos.</p>
+    <div class="drag-hint">Arrastra para explorar →</div>
+    <div class="works"><div class="w"><figure><img decoding="async" src="../assets/ig/daniel_zahav-0.jpg" alt="Trabajo de DANIEL 1" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.01</b>: ) ⠀ 𝘈𝘨𝘦𝘯𝘥𝘢 𝘢𝘣𝘪𝘦𝘳𝘵𝘢 consultas al DM 💬 ⠀ ⠀ ▪️▫️ ⠀ ⠀ #tinytattoo#smiley#micr…</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/daniel_zahav-1.jpg" alt="Trabajo de DANIEL 2" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.02</b>🐅 ⠀ 𝘈𝘨𝘦𝘯𝘥𝘢 𝘢𝘣𝘪𝘦𝘳𝘵𝘢 Consultas al DM 💬 ⠀ ⠀ ▪️▫️ ⠀ ⠀ #tinytattoo#smalltattoo#t…</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/daniel_zahav-2.jpg" alt="Trabajo de DANIEL 3" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.03</b>𝐏 𝐞 𝐫 𝐬 𝐞 𝐯 𝐞 𝐫 𝐚 𝐧 𝐜 𝐢 𝐚 Para mi amigo: @danielbehappy. ⠀ 𝘈𝘨𝘦𝘯𝘥𝘢 𝘢𝘣𝘪𝘦𝘳𝘵𝘢 c…</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/daniel_zahav-3.jpg" alt="Trabajo de DANIEL 4" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.04</b>𝘑𝘦𝘧𝘧 𝘉𝘶𝘤𝘬𝘭𝘦𝘺 ⠀PD: No estaba muy familiarizado con Jeff hasta este tatuaje, …</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/daniel_zahav-4.jpg" alt="Trabajo de DANIEL 5" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.05</b>🫀 Agenda abierta Consultas al DM 💬 ⠀ ⠀ ▪️▫️ ⠀ ⠀ #tinytattoo#smalltattoo#tat…</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/daniel_zahav-5.jpg" alt="Trabajo de DANIEL 6" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.06</b>Jochi ⠀ Agenda abierta, consultas al Dm 💬 ⠀Tatuando en: 📍@vatattoobene ▪️▫️…</figcaption></figure></div></div>
+    <div class="focus"><div class="f"><b><i>—</i>Detalle real</b><p>Microrealismo y realismo con grises que curan limpio.</p></div><div class="f"><b><i>—</i>Agenda abierta</b><p>Consulta por cupos y Elektron: responde directo por WhatsApp.</p></div><div class="f"><b><i>—</i>Diseño a medida</b><p>Cada pieza se adapta a tu zona y tu idea.</p></div></div>
+    <div class="book rv">
+      <h2>¿Trabajamos <em>tu pieza?</em></h2>
+      <p>Escríbeme con tu idea, zona y tamaño. Respuesta honesta en 24 horas.</p>
+      <div class="row">
+        <a class="b-wa" href="https://wa.me/56920531438?text=Hola%20Daniel%2C%20quiero%20cotizar%20una%20pieza%20contigo" target="_blank" rel="noopener">Cotizar por WhatsApp →</a>
+        <a class="b-ig" href="../index.html#equipo">Ver todo el equipo</a>
+      </div>
+    </div>
+  </div>
+</section>
+<dialog id="zoom"><img decoding="async" id="zoom-img" src="" alt="Ampliación del trabajo"><div class="zcap" id="zoom-cap"></div></dialog>
+<footer>
+  <div class="wrap foot"><span>© 2026 Vatattoobene — Daniel Zahav</span><a href="../index.html#equipo">← Volver al equipo</a></div>
+</footer>
+<script>
+(function(){"use strict";
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var rail=document.querySelector('.works');
+if(rail){var dn=false,sx=0,sl=0;
+rail.addEventListener('pointerdown',function(e){dn=true;sx=e.clientX;sl=rail.scrollLeft;rail.classList.add('dragging');try{rail.setPointerCapture(e.pointerId)}catch(_){}});
+rail.addEventListener('pointermove',function(e){if(!dn)return;rail.scrollLeft=sl-(e.clientX-sx)});
+['pointerup','pointercancel','pointerleave'].forEach(function(ev){rail.addEventListener(ev,function(){dn=false;rail.classList.remove('dragging')})});}
+var zg=document.getElementById('zoom');
+if(zg){document.querySelectorAll('.w img').forEach(function(im){
+im.addEventListener('click',function(){
+document.getElementById('zoom-img').src=im.src;
+var cap=im.closest('figure').querySelector('figcaption');
+document.getElementById('zoom-cap').textContent=cap?cap.textContent:'';
+if(typeof zg.showModal==='function')zg.showModal();
+});
+});
+zg.addEventListener('click',function(){zg.close()});}
+})();
+</script>
+</body>
+</html>

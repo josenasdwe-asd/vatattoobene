@@ -62,7 +62,6 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "¿Cómo agendo mi cita en VATATTOOBENE?", "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos por WhatsApp con tu idea, la zona del cuerpo y el tamaño aproximado. Respondemos en 24 horas con diagnóstico honesto y presupuesto. Para bloquear la fecha se requiere una seña del 50%, que se descuenta del total." } },
-    { "@type": "Question", "name": "¿Cuánto cuesta un tatuaje?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tamaño, detalle y zona. Referencial: flash desde $35.000 CLP, mediana 8–15 cm entre $70.000 y $130.000, grande 16–25 cm entre $130.000 y $250.000. El presupuesto final lo fija tu artista y queda cerrado antes de la seña." } },
     { "@type": "Question", "name": "¿La seña se descuenta del total?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, la seña del 50% se descuenta del valor final de la pieza. Se pierde si la sesión se cancela con menos de 72 horas de aviso o si no asistes; con aviso anticipado se puede reprogramar." } },
     { "@type": "Question", "name": "¿Puedo traer mi propio diseño?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. El artista adapta tu idea a tu piel y al estilo de la casa. Cada pieza se dibuja desde cero para un solo cuerpo — no repetimos diseños." } },
     { "@type": "Question", "name": "¿Cuánto tarda en curar un tatuaje?", "acceptedAnswer": { "@type": "Answer", "text": "La curación superficial toma 2 a 4 semanas y la completa 2 a 3 meses. Entregamos los cuidados por escrito y hacemos seguimiento por WhatsApp durante el proceso." } },
@@ -383,15 +382,9 @@
   .tk-send{grid-column:1/-1;justify-content:center;margin-top:.35rem;cursor:pointer;border:0;padding:.6rem 1.4rem}
   .tk-send:active{transform:scale(.98)}
 
-  /* FAQ — dudas y valores orientativos */
-  .faq-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:2.6rem;margin-top:2.6rem;align-items:start}
+  /* FAQ — dudas frecuentes */
+  .faq-grid{max-width:840px;margin:2.6rem auto 0}
   .faq-t{font-family:var(--display);font-weight:400;font-size:1.2rem;letter-spacing:.1em;color:var(--gold);margin-bottom:1rem;text-transform:uppercase}
-  .price{border-top:1px solid var(--border)}
-  .pr{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.8rem 2px;border-bottom:1px solid var(--border)}
-  .pr b{font-family:var(--display);font-weight:400;font-size:1rem;letter-spacing:.06em}
-  .pr b em{font-family:var(--serif);font-style:italic;font-size:.78em;color:var(--grey);letter-spacing:0;text-transform:none}
-  .pr span{color:var(--gold);font-size:.78rem;letter-spacing:.06em;white-space:nowrap}
-  .pnote{font-size:.7rem;color:var(--grey);line-height:1.75;margin-top:1.1rem}
   details.fq{border-bottom:1px solid var(--border)}
   details.fq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 2px;
     font-family:var(--display);font-weight:400;font-size:1.08rem;letter-spacing:.05em;color:var(--white)}
@@ -774,20 +767,8 @@
 
 <section id="faq" style="padding-top:2rem">
   <div class="wrap">
-    <div class="sec-bar rv"><h2>06 / Preguntas <em>— antes de la tinta</em></h2><span class="n" data-es="[ FAQ · Valores ]" data-en="[ FAQ · Pricing ]">[ FAQ · Valores ]</span></div>
+    <div class="sec-bar rv"><h2>06 / Preguntas <em>— antes de la tinta</em></h2><span class="n">[ FAQ ]</span></div>
     <div class="faq-grid">
-      <div class="rv">
-        <h3 class="faq-t" data-es="Valores orientativos" data-en="Reference pricing">Valores orientativos</h3>
-        <div class="price">
-          <div class="pr"><b><span data-es="Flash" data-en="Flash">Flash</span> <em data-es="diseño del estudio" data-en="studio design">diseño del estudio</em></b><span data-es="desde $35.000" data-en="from CLP 35.000">desde $35.000</span></div>
-          <div class="pr"><b><span data-es="Chica" data-en="Small">Chica</span> <em data-es="hasta 7 cm" data-en="up to 3 in">hasta 7 cm</em></b><span data-es="desde $45.000" data-en="from CLP 45.000">desde $45.000</span></div>
-          <div class="pr"><b><span data-es="Mediana" data-en="Medium">Mediana</span> <em data-es="8 a 15 cm" data-en="3 to 6 in">8 a 15 cm</em></b><span>$70.000 – $130.000</span></div>
-          <div class="pr"><b><span data-es="Grande" data-en="Large">Grande</span> <em data-es="16 a 25 cm" data-en="6 to 10 in">16 a 25 cm</em></b><span>$130.000 – $250.000</span></div>
-          <div class="pr"><b><span data-es="Pieza grande" data-en="XL piece">Pieza grande</span> <em data-es="por sesión" data-en="per session">por sesión</em></b><span data-es="$70.000 – $90.000 / h" data-en="CLP 70.000 – 90.000 / h">$70.000 – $90.000 / h</span></div>
-          <div class="pr"><b><span data-es="Cover-up" data-en="Cover-up">Cover-up</span> <em data-es="previa evaluación" data-en="after assessment">previa evaluación</em></b><span data-es="desde $150.000" data-en="from CLP 150.000">desde $150.000</span></div>
-        </div>
-        <p class="pnote" data-es="Valores referenciales en CLP. El presupuesto final lo fija tu artista según detalle, zona y complejidad — y queda cerrado antes de la seña. Sin sorpresas." data-en="Reference prices in CLP. Your artist sets the final quote based on detail, placement and complexity — and it's locked before the deposit. No surprises.">Valores referenciales en CLP. El presupuesto final lo fija tu artista según detalle, zona y complejidad — y queda cerrado antes de la seña. Sin sorpresas.</p>
-      </div>
       <div class="rv">
         <h3 class="faq-t" data-es="Dudas frecuentes" data-en="Common questions">Dudas frecuentes</h3>
         <details class="fq">

@@ -74,14 +74,14 @@
 
     if (calm){ /* reducir movimiento: desvanecido escalonado, sin vibración */
       chars.forEach(function(o, k){
-        setTimeout(function(){ if (o.sp.isConnected) o.sp.classList.add('ink-on'); }, k * 22);
+        setTimeout(function(){ if (o.sp.isConnected) o.sp.classList.add('ink-on'); }, k * 34);
       });
-      setTimeout(finish, chars.length * 22 + 260);
+      setTimeout(finish, chars.length * 34 + 320);
       return;
     }
 
-    /* la aguja avanza letra a letra; el ritmo se adapta al largo del título */
-    var step = Math.max(38, Math.min(75, 1500 / chars.length));
+    /* la aguja avanza letra a letra, con pausa de artesano (1.6-2.8s por título) */
+    var step = Math.max(70, Math.min(130, 2600 / chars.length));
     chars.forEach(function(o, k){
       setTimeout(function(){
         if (!o.sp.isConnected) return; /* setLang pudo reemplazar el texto */
@@ -96,11 +96,11 @@
             return;
           }
           o.sp.textContent = GLYPHS.charAt(Math.floor(Math.random() * GLYPHS.length));
-        }, 46);
-      }, k * step);
+        }, 62);
+      }, k * step + Math.random() * 35);
     });
     /* red de seguridad: aunque algo falle, el título queda visible */
-    setTimeout(finish, chars.length * step + 420);
+    setTimeout(finish, chars.length * step + 700);
   }
 
   function inViewport(el){

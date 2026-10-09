@@ -3,18 +3,16 @@
 > **IMPORTANTE**: Estas imágenes son **referenciales** (fotos web de tatuajes acordes al estilo declarado de cada artista).
 > Instagram bloquea el scraping sin login, por lo que no fue posible descargar el trabajo real de cada @ desde el entorno de trabajo.
 > Para reemplazar: guarda la foto real con el mismo nombre de archivo (misma ruta) y listo — no hay que tocar código.
+> Entradas marcadas **REAL** = foto verificada entregada por el estudio (reemplaza la referencial).
 
+- `negro_ttt-0.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): fénix black & grey, espalda completa
+- `negro_ttt-1.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): retrato realista en antebrazo
+- `negro_ttt-2.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): rostro con rosas, puntillismo en muslo
 - `santiarts-0.jpg` ← OCD Ink Studio (900x1200) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/03f0a74faaa4.jpg
 - `santiarts-2.jpg` ← 1MM Tattoo Studio (1080x1350) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a68dd3b60cb4.jpg
 - `santiarts-3.jpg` ← H2M Tattoo Studio (736x1104) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7a2aa545113f.jpg
 - `santiarts-4.jpg` ← EZINK (1280x1618) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c24533d90757.jpg
 - `santiarts-5.jpg` ← Removery Tattoo Removal (1201x801) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/dc68f2d4dfdd.jpg
-- `negro_ttt-0.jpg` ← OCD Ink Studio (1200x1599) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/8aedc7f3d03c.jpg
-- `negro_ttt-1.jpg` ← K4 Henna (700x1244) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/fe0288f90d33.webp
-- `negro_ttt-2.jpg` ← Love Machine - Tattoo shop New York (1080x1350) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/bb007f839dd7.jpg
-- `negro_ttt-3.jpg` ← OMEN Tattoo (975x975) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ae93914faed8.jpeg
-- `negro_ttt-4.jpg` ← OMEN Tattoo (1080x1080) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/24a426638405.jpg
-- `negro_ttt-5.jpg` ← Hon Tattoo Studio (980x1307) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/06b8f72a0220.jpg
 - `daniel_zahav-0.jpg` ← Tattoofilter (1000x1000) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ab607fbcda4b.jpg
 - `daniel_zahav-1.jpg` ← Sun Tattoo (1080x1616) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/de33d84fc389.jpg
 - `daniel_zahav-2.jpg` ← Pinterest (736x1172) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a1dc99f95478.jpg

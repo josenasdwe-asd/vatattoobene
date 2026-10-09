@@ -105,6 +105,23 @@
   .rv{opacity:0;filter:blur(10px);transform:translateY(18px);transition:opacity .9s ease,filter .9s ease,transform .9s ease}
   .rv.in{opacity:1;filter:blur(0);transform:none}
   @media(prefers-reduced-motion:reduce){.rv{opacity:1;filter:none;transform:none}}
+
+  /* TINTA EN HOVER (detalle 14) — los links no se subrayan: se sangra tinta dorada */
+  .mmenu a:not(.m-cta),.fcol a,.brand,.back,.foot a{position:relative}
+  .fcol a{width:fit-content}
+  .mmenu a:not(.m-cta)::after,.fcol a::after,.brand::after,.back::after,.foot a::after{
+    content:'';position:absolute;left:0;bottom:-3px;width:100%;height:2px;border-radius:2px;
+    background:linear-gradient(90deg,#bd9d55,#dcc388 78%,#f0e0b0);
+    transform:scaleX(0);transform-origin:right;
+    transition:transform .34s cubic-bezier(.25,.7,.3,1)}
+  .mmenu a:not(.m-cta)::after{bottom:-6px}
+  .mmenu a:not(.m-cta):hover::after,.mmenu a:not(.m-cta):focus-visible::after,
+  .fcol a:hover::after,.fcol a:focus-visible::after,
+  .brand:hover::after,.brand:focus-visible::after,
+  .back:hover::after,.back:focus-visible::after,
+  .foot a:hover::after,.foot a:focus-visible::after{transform:scaleX(1);transform-origin:left}
+  @media(prefers-reduced-motion:reduce){
+    .mmenu a:not(.m-cta)::after,.fcol a::after,.brand::after,.back::after,.foot a::after{transition:none}}
 </style>
 </head>
 <body>

@@ -328,13 +328,18 @@
   .st span{font-size:.6rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;display:block;margin-top:1rem}
 
   /* RESERVA — ticket vintage completo: arte del usuario como fondo, contenido sobre el papel */
-  .book{position:relative;margin:5rem auto 0;max-width:1080px;aspect-ratio:1365/768;border-radius:18px;overflow:hidden;
+  .book{position:relative;container-type:inline-size;margin:5rem auto 0;max-width:1080px;aspect-ratio:1365/768;border-radius:18px;overflow:hidden;
     background:#0c0b09;border:1px solid rgba(20,18,14,.8);box-shadow:0 30px 70px rgba(0,0,0,.55)}
   .tk-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
   .book::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
     background:radial-gradient(52% 42% at 50% 62%,rgba(241,234,215,.55) 0%,rgba(241,234,215,.3) 55%,rgba(241,234,215,0) 100%)}
-  .tk-inner{position:absolute;z-index:2;top:41.5%;left:50%;transform:translateX(-50%);width:min(76%,800px);
+  .tk-inner{position:absolute;z-index:2;top:41.5%;left:50%;transform-origin:50% 0;transform:translateX(-50%) scale(1);width:74cqw;
     display:flex;flex-direction:column;justify-content:flex-start;align-items:center;text-align:center}
+  @media(max-width:1127px){.tk-inner{transform:translateX(-50%) scale(.96)}}
+  @media(max-width:1049px){.tk-inner{transform:translateX(-50%) scale(.88)}}
+  @media(max-width:949px){.tk-inner{transform:translateX(-50%) scale(.8)}}
+  @media(max-width:874px){.tk-inner{transform:translateX(-50%) scale(.73)}}
+  @media(max-width:799px){.tk-inner{transform:translateX(-50%) scale(.68)}}
   .book h2{position:relative;font-family:'Anton',var(--display);font-weight:400;font-size:clamp(1.5rem,2.2vw,2rem);
     line-height:.98;letter-spacing:.015em;margin:0;color:#181510;text-transform:uppercase}
   .book p{position:relative;color:#4c4636;font-size:.8rem;line-height:1.6;max-width:46ch;margin:.75rem auto 0}
@@ -347,7 +352,7 @@
     font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:.25s}
   .b-bk:hover{background:#000;transform:translateY(-1px)}
   .b-bk svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:1.8}
-  .book small{position:relative;display:block;margin-top:.35rem;font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:#453f2e}
+  .book small{position:relative;display:block;margin-top:max(.52cqw,.4rem);font-size:max(1cqw,.64rem);letter-spacing:.11em;text-transform:uppercase;color:#3a3423;font-weight:600}
 
   /* Título de reserva — fuera del boleto en pantallas grandes */
   .res-head{display:none;text-align:center}
@@ -372,20 +377,20 @@
   @media(prefers-reduced-motion:reduce){.tk-eyes i{animation:none}}
 
   /* BOLETO — formulario pre-llenado de WhatsApp */
-  .book .tk-lead{font-size:.74rem;max-width:64ch;margin:0 auto;text-shadow:0 1px 0 rgba(240,233,211,.85),0 0 7px rgba(240,233,211,.45)}
-  .tk-form{position:relative;width:100%;max-width:760px;margin:.45rem auto 0;display:grid;grid-template-columns:1.05fr .95fr 1.15fr 1.25fr;gap:.4rem .9rem;text-align:left}
-  .tf{display:flex;flex-direction:column;gap:.18rem;min-width:0}
+  .book .tk-lead{font-size:max(1.1cqw,.72rem);max-width:64ch;margin:0 auto;text-shadow:0 1px 0 rgba(240,233,211,.85),0 0 7px rgba(240,233,211,.45)}
+  .tk-form{position:relative;width:100%;max-width:70.4cqw;margin:.67cqw auto 0;display:grid;grid-template-columns:1.05fr .95fr 1.15fr 1.25fr;gap:.6cqw 1.33cqw;text-align:left}
+  .tf{display:flex;flex-direction:column;gap:.27cqw;min-width:0}
   .tf.full{grid-column:1/-1}
-  .tf label{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#57503c;font-weight:600;text-shadow:0 0 2px rgba(240,233,211,.7)}
+  .tf label{font-size:max(.86cqw,.58rem);letter-spacing:.22em;text-transform:uppercase;color:#57503c;font-weight:600;text-shadow:0 0 2px rgba(240,233,211,.7)}
   .tf input,.tf select,.tf textarea{width:100%;background:rgba(255,255,255,.55);border:0;border-bottom:1.5px dashed rgba(90,74,48,.55);
     -webkit-backdrop-filter:blur(3px) saturate(1.05);backdrop-filter:blur(3px) saturate(1.05);
-    border-radius:4px 4px 0 0;font-family:var(--serif);font-style:italic;font-size:.92rem;color:#241f14;padding:.24rem .5rem;outline:none;
+    border-radius:4px 4px 0 0;font-family:var(--serif);font-style:italic;font-size:max(1.36cqw,.85rem);color:#241f14;padding:max(.36cqw,.22rem) max(.74cqw,.45rem);outline:none;
     transition:border-color .25s,background .25s,box-shadow .25s;resize:none;appearance:none;-webkit-appearance:none}
   .tf select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%235a4a30' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .4rem center}
   .tf select option{font-family:var(--body);font-style:normal;font-size:.85rem}
   .tf input:focus,.tf select:focus,.tf textarea:focus{border-bottom-color:#a87f1f;border-bottom-style:solid;background:rgba(255,255,255,.78);box-shadow:0 8px 16px -10px rgba(168,127,31,.55)}
   .tf ::placeholder{color:#75694d;opacity:1}
-  .tk-send{grid-column:1/-1;justify-self:center;width:min(62%,470px);justify-content:center;margin-top:.3rem;cursor:pointer;border:0;padding:.58rem 1.4rem;box-shadow:0 3px 0 rgba(15,73,38,.35)}
+  .tk-send{grid-column:1/-1;justify-self:center;width:min(62%,43.5cqw);justify-content:center;margin-top:.44cqw;cursor:pointer;border:0;padding:max(.86cqw,.5rem) 2.07cqw;font-size:max(.98cqw,.62rem);box-shadow:0 3px 0 rgba(15,73,38,.35)}
   .tk-send:active{transform:scale(.98)}
 
   /* FAQ — dudas frecuentes */
@@ -537,6 +542,13 @@
     .tk-photo{position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
     .tk-inner{position:static;transform:none;width:100%;height:auto;margin:0;padding:1.7rem 1.3rem 2rem;border-top:2px dashed rgba(90,74,48,.5)}
     .book p{max-width:44ch;margin:.7rem auto 0}
+    .tk-form{max-width:100%;margin:.7rem auto 0;gap:.5rem .8rem}
+    .tf{gap:.22rem}
+    .tf label{font-size:.62rem}
+    .tf input,.tf select,.tf textarea{font-size:.95rem;padding:.3rem .5rem}
+    .book .tk-lead{font-size:.8rem}
+    .book small{margin-top:.6rem;font-size:.66rem}
+    .book .tk-send{font-size:.66rem;margin-top:.6rem;padding:.6rem 1.2rem}
     .fgrid{grid-template-columns:1fr;gap:1.6rem}
   }
 

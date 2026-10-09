@@ -72,23 +72,28 @@
   .w figcaption b{color:var(--gold);font-weight:400;margin-right:.6rem}
   .focus{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
   @media(max-width:760px){.focus{grid-template-columns:1fr}}
-  .f{position:relative;padding:1.9rem 1.6rem;border:1px solid var(--border);border-radius:12px;
-    background:linear-gradient(155deg,rgba(201,168,76,.07),rgba(201,168,76,0) 52%),#121214;
+  .f{position:relative;padding:10px 10px 1.25rem;border:1px solid #2b251d;border-radius:12px;
+    background:linear-gradient(180deg,#1a1611,#111010);
     transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
   .f:hover{transform:translateY(-4px);border-color:rgba(201,168,76,.5);box-shadow:0 16px 36px -16px rgba(0,0,0,.85)}
-  .f b{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.05em;display:block;margin-bottom:.55rem}
-  .f b i{color:var(--gold);font-style:normal;margin-right:.55rem;letter-spacing:.08em}
-  .f p{font-size:.84rem;line-height:1.65;color:var(--grey)}
-  .book{position:relative;margin-top:4.5rem;background:linear-gradient(150deg,#f6f1e6,#e8e1cf);color:#0a0a0a;border:1px solid var(--gold);border-radius:16px;padding:clamp(2.4rem,5vw,3.8rem);text-align:center;box-shadow:0 26px 60px -28px rgba(201,168,76,.35);overflow:hidden}
-  .book::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(62% 90% at 50% 0%,rgba(201,168,76,.16),transparent 70%)}
-  .book h2{font-size:clamp(2.4rem,6vw,4.6rem);position:relative}
-  .book h2 em{font-family:var(--serif);font-style:italic}
-  .book p{color:#444;margin:.8rem auto 0;max-width:50ch;position:relative}
-  .book .row{display:flex;gap:.8rem;justify-content:center;margin-top:1.8rem;flex-wrap:wrap;position:relative}
-  .b-wa{background:var(--green);color:#fff;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:transform .25s,background .25s,box-shadow .25s}
-  .b-wa:hover{background:#20ba5a;transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(37,211,102,.55)}
-  .b-ig{border:1px solid #0a0a0a;color:#0a0a0a;padding:1rem 2.2rem;border-radius:32px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:transform .25s,background .25s,color .25s}
-  .b-ig:hover{background:#0a0a0a;color:var(--white);transform:translateY(-2px)}
+  .f .fphoto{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:#0c0b09;border:1px solid rgba(226,205,160,.3)}
+  .f .fphoto::after{content:'';position:absolute;inset:5px;border:1px solid rgba(226,205,160,.25);border-radius:5px;pointer-events:none;z-index:2}
+  .f .fphoto img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.22) saturate(.9) contrast(1.05) brightness(.94);transition:transform .6s ease}
+  .f:hover .fphoto img{transform:scale(1.05)}
+  .f b{font-family:var(--display);font-weight:400;font-size:1.02rem;letter-spacing:.16em;text-transform:uppercase;color:#ecdfc3;display:block;margin:1rem .4rem .45rem;line-height:1.2}
+  .f b i{color:var(--gold);font-style:normal;margin-right:.45rem;letter-spacing:.08em}
+  .f p{font-size:.8rem;line-height:1.6;color:var(--grey);margin:0 .4rem}
+  .book{position:relative;margin-top:4.5rem;background:#0c0a07 url('../assets/img/cta-marble.jpg') center/cover no-repeat;color:var(--white);border:1px solid rgba(201,168,76,.32);border-radius:16px;padding:clamp(2.8rem,5vw,4.2rem) clamp(1.4rem,4vw,3.8rem);text-align:center;overflow:hidden}
+  .book::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,rgba(10,8,5,.40) 0%,rgba(10,8,5,.62) 55%,rgba(10,8,5,.88) 82%)}
+  .book h2{font-size:clamp(2.4rem,6vw,4.4rem);position:relative;color:#f0e6cf}
+  .book h2 em{font-family:var(--serif);font-style:italic;color:var(--gold-l)}
+  .book p{color:#cfc4ab;margin:.9rem auto 0;max-width:52ch;position:relative}
+  .book .row{display:flex;gap:.8rem;justify-content:center;margin-top:2rem;flex-wrap:wrap;position:relative}
+  .b-wa{display:inline-flex;align-items:center;gap:.6rem;background:rgba(12,11,8,.82);border:1px solid rgba(255,255,255,.18);color:#f0ead8;padding:1rem 2rem;border-radius:10px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:transform .25s,background .25s,border-color .25s}
+  .b-wa svg{width:18px;height:18px;fill:var(--green);flex:none}
+  .b-wa:hover{border-color:var(--green);background:rgba(37,211,102,.14);transform:translateY(-2px)}
+  .b-ig{background:linear-gradient(180deg,#dcc388,#bd9d55);color:#191304;padding:1rem 2rem;border-radius:10px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px dashed rgba(25,19,4,.55);box-shadow:0 10px 26px rgba(0,0,0,.4),0 0 0 1px rgba(201,168,76,.35);transition:transform .25s,filter .25s}
+  .b-ig:hover{filter:brightness(1.08);transform:translateY(-2px)}
   footer{border-top:1px solid var(--border);margin-top:4rem;padding:2.5rem 0;font-size:.62rem;letter-spacing:.14em;color:#4a4a48;text-transform:uppercase}
   .foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   .foot a{color:var(--grey);text-decoration:none}
@@ -121,12 +126,12 @@
     <h2>El trabajo <em>habla solo.</em></h2>
     <p class="bio"><strong>Dream Tattoo.</strong> Revisa sus promos vigentes en Instagram y asegura tu cupo.</p>
     <div class="works"><div class="w"><figure><img decoding="async" src="../assets/ig/mertvynk-1.jpg" alt="Tatuaje de MERT 1" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.01</b>Custom design.</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/mertvynk-2.jpg" alt="Tatuaje de MERT 2" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.02</b>Per Audacia Ad Astra.</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/mertvynk-3.jpg" alt="Tatuaje de MERT 3" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.03</b>Arreglo de tatuaje anterior.</figcaption></figure></div><div class="w"><figure><img decoding="async" src="../assets/ig/mertvynk-5.jpg" alt="Tatuaje de MERT 4" loading="lazy" draggable="false" onerror="this.onerror=null;this.src='../assets/img/tattoo-fallback.svg'"><figcaption><b>P.04</b>Like a dream.</figcaption></figure></div></div>
-    <div class="focus"><div class="f"><b><i>01</i>Promos vigentes</b><p>Pregunta por la promo del mes.</p></div><div class="f"><b><i>02</i>Reserva directa</b><p>Cotiza por WhatsApp.</p></div><div class="f"><b><i>03</i>Diseño a medida</b><p>Tu idea, adaptada a tu cuerpo.</p></div></div>
+    <div class="focus"><div class="f rv"><div class="fphoto"><img decoding="async" src="../assets/img/why-dibujo.jpg" alt="Máquina de tatuar sobre bocetos a lápiz" loading="lazy" onerror="this.remove()"></div><b><i>—</i>Dibujo único</b><p>Nada de flashes repetidos. Bocetos personalizados para tu cuerpo, ajustados hasta tu firma.</p></div><div class="f rv"><div class="fphoto"><img decoding="async" src="../assets/img/why-curado.jpg" alt="Productos de curado sobre bandeja de madera" loading="lazy" onerror="this.remove()"></div><b><i>—</i>Curado acompañado</b><p>Seguimiento y asesoría en los días 7 y 30. Retoque incluido si la piel lo necesita.</p></div><div class="f rv"><div class="fphoto"><img decoding="async" src="../assets/img/why-diagnostico.jpg" alt="Calibre digital, balanza y lupa sobre mesa de trabajo" loading="lazy" onerror="this.remove()"></div><b><i>—</i>Diagnóstico honesto</b><p>Cobertura real y viable en cover-ups. Equilibrio visual a largo plazo. Transparencia total.</p></div></div>
     <div class="book rv">
       <h2>¿Trabajamos <em>tu pieza?</em></h2>
-      <p>Escríbeme con tu idea, zona y tamaño. Respuesta honesta en 24 horas.</p>
+      <p>Cuéntanos tu idea, zona y tamaño aproximado. Recibirás una respuesta honesta y un diagnóstico en 24 horas.</p>
       <div class="row">
-        <a class="b-wa" href="https://wa.me/56920531438?text=Hola%20Mert%2C%20quiero%20cotizar%20una%20pieza%20contigo" target="_blank" rel="noopener">Cotizar por WhatsApp →</a>
+        <a class="b-wa" href="https://wa.me/56920531438?text=Hola%20Mert%2C%20quiero%20cotizar%20una%20pieza%20contigo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Cotizar por WhatsApp</a>
         <a class="b-ig" href="../index.html#equipo">Ver todo el equipo</a>
       </div>
     </div>

@@ -237,6 +237,11 @@
     border-radius:8px;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:.25s}
   .mbtn-wa:hover{border-color:var(--green);color:#fff;background:rgba(37,211,102,.12)}
 
+  /* linea de aguja: progreso de la sesion */
+  .ink-bar{position:absolute;left:0;bottom:0;height:2px;width:0;z-index:210;pointer-events:none;opacity:0;
+    background:linear-gradient(90deg,rgba(201,168,76,.2),var(--gold) 55%,var(--gold-l));box-shadow:0 0 8px rgba(201,168,76,.5)}
+  .ink-bar::after{content:'';position:absolute;right:0;top:50%;width:7px;height:7px;border-radius:50%;
+    transform:translate(3px,-50%);background:var(--gold-l);box-shadow:0 0 12px 3px rgba(232,201,122,.65)}
   /* MODAL portfolio personal */
   dialog{border:1px solid var(--gold);background:#101012;color:var(--white);border-radius:16px;max-width:640px;width:92vw;padding:0}
   dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
@@ -854,6 +859,22 @@
   /* reveal */
   var nav = document.querySelector('nav');
   addEventListener('scroll', function(){ if(nav) nav.classList.toggle('scrolled', scrollY > 40); }, {passive:true});
+  /* linea de aguja: la sesion avanza contigo */
+  var ink = document.createElement('div');
+  ink.className = 'ink-bar';
+  ink.setAttribute('aria-hidden', 'true');
+  if(nav) nav.appendChild(ink);
+  var inkQ = false;
+  function inkUpd(){
+    var max = document.documentElement.scrollHeight - innerHeight;
+    var p = max > 0 ? Math.min(1, scrollY / max) : 0;
+    ink.style.width = (p * 100).toFixed(2) + '%';
+    ink.style.opacity = p > 0.001 ? '1' : '0';
+    inkQ = false;
+  }
+  addEventListener('scroll', function(){ if(!inkQ){ inkQ = true; requestAnimationFrame(inkUpd); } }, {passive:true});
+  addEventListener('resize', inkUpd, {passive:true});
+  inkUpd();
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.08});

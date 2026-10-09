@@ -332,8 +332,8 @@
     background:#0c0b09;border:1px solid rgba(20,18,14,.8);box-shadow:0 30px 70px rgba(0,0,0,.55)}
   .tk-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
   .book::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-    background:radial-gradient(44% 36% at 50% 58%,rgba(241,234,215,.6) 0%,rgba(241,234,215,.3) 55%,rgba(241,234,215,0) 100%)}
-  .tk-inner{position:absolute;z-index:2;top:36.5%;left:50%;transform:translateX(-50%);width:min(74%,780px);
+    background:radial-gradient(52% 42% at 50% 62%,rgba(241,234,215,.55) 0%,rgba(241,234,215,.3) 55%,rgba(241,234,215,0) 100%)}
+  .tk-inner{position:absolute;z-index:2;top:41.5%;left:50%;transform:translateX(-50%);width:min(76%,800px);
     display:flex;flex-direction:column;justify-content:flex-start;align-items:center;text-align:center}
   .book h2{position:relative;font-family:'Anton',var(--display);font-weight:400;font-size:clamp(1.5rem,2.2vw,2rem);
     line-height:.98;letter-spacing:.015em;margin:0;color:#181510;text-transform:uppercase}
@@ -347,7 +347,7 @@
     font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600;transition:.25s}
   .b-bk:hover{background:#000;transform:translateY(-1px)}
   .b-bk svg{width:15px;height:15px;fill:none;stroke:#fff;stroke-width:1.8}
-  .book small{position:relative;display:block;margin-top:.4rem;font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#6b6350}
+  .book small{position:relative;display:block;margin-top:.35rem;font-size:.6rem;letter-spacing:.13em;text-transform:uppercase;color:#5d5540;text-shadow:0 0 8px rgba(240,233,211,.9)}
 
   /* Título de reserva — fuera del boleto en pantallas grandes */
   .res-head{display:none;text-align:center}
@@ -372,19 +372,20 @@
   @media(prefers-reduced-motion:reduce){.tk-eyes i{animation:none}}
 
   /* BOLETO — formulario pre-llenado de WhatsApp */
-  .book .tk-lead{font-size:.72rem;max-width:64ch;margin:.3rem auto 0}
-  .tk-form{position:relative;width:100%;max-width:720px;margin:.55rem auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem .8rem;text-align:left}
+  .book .tk-lead{font-size:.74rem;max-width:64ch;margin:0 auto;text-shadow:0 1px 0 rgba(240,233,211,.85),0 0 12px rgba(240,233,211,.7)}
+  .tk-form{position:relative;width:100%;max-width:760px;margin:.45rem auto 0;display:grid;grid-template-columns:1.05fr .95fr 1.15fr 1.25fr;gap:.4rem .9rem;text-align:left}
   .tf{display:flex;flex-direction:column;gap:.18rem;min-width:0}
   .tf.full{grid-column:1/-1}
-  .tf label{font-size:.52rem;letter-spacing:.24em;text-transform:uppercase;color:#6b6350}
-  .tf input,.tf select,.tf textarea{width:100%;background:rgba(255,255,255,.32);border:0;border-bottom:1.5px dashed rgba(90,74,48,.55);
-    border-radius:4px 4px 0 0;font-family:var(--serif);font-style:italic;font-size:.88rem;color:#241f14;padding:.25rem .45rem;outline:none;
+  .tf label{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:#57503c;font-weight:600;text-shadow:0 0 6px rgba(240,233,211,.95)}
+  .tf input,.tf select,.tf textarea{width:100%;background:rgba(255,255,255,.55);border:0;border-bottom:1.5px dashed rgba(90,74,48,.55);
+    -webkit-backdrop-filter:blur(3px) saturate(1.05);backdrop-filter:blur(3px) saturate(1.05);
+    border-radius:4px 4px 0 0;font-family:var(--serif);font-style:italic;font-size:.92rem;color:#241f14;padding:.24rem .5rem;outline:none;
     transition:border-color .25s,background .25s,box-shadow .25s;resize:none;appearance:none;-webkit-appearance:none}
   .tf select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%235a4a30' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .4rem center}
   .tf select option{font-family:var(--body);font-style:normal;font-size:.85rem}
-  .tf input:focus,.tf select:focus,.tf textarea:focus{border-bottom-color:#a87f1f;border-bottom-style:solid;background:rgba(255,255,255,.55);box-shadow:0 8px 16px -10px rgba(168,127,31,.55)}
-  .tf ::placeholder{color:#8d8368;opacity:1}
-  .tk-send{grid-column:1/-1;justify-content:center;margin-top:.35rem;cursor:pointer;border:0;padding:.6rem 1.4rem}
+  .tf input:focus,.tf select:focus,.tf textarea:focus{border-bottom-color:#a87f1f;border-bottom-style:solid;background:rgba(255,255,255,.78);box-shadow:0 8px 16px -10px rgba(168,127,31,.55)}
+  .tf ::placeholder{color:#75694d;opacity:1}
+  .tk-send{grid-column:1/-1;justify-self:center;width:min(62%,470px);justify-content:center;margin-top:.3rem;cursor:pointer;border:0;padding:.58rem 1.4rem;box-shadow:0 3px 0 rgba(15,73,38,.35)}
   .tk-send:active{transform:scale(.98)}
 
   /* FAQ — dudas frecuentes */
@@ -561,6 +562,7 @@
     .book small{letter-spacing:.1em;line-height:2}
     .tk-form{max-width:100%;grid-template-columns:1fr 1fr;gap:.55rem .7rem}
     .tf input,.tf select,.tf textarea{font-size:16px}
+    .tk-send{width:100%;justify-self:stretch}
     .modal-head{grid-template-columns:1fr;padding:3rem 1.2rem 1rem;text-align:center;justify-items:center}
     .modal-mono{width:96px;height:112px;font-size:52px}
     .modal-bio{padding:0 1.2rem}

@@ -8,6 +8,9 @@
 - `negro_ttt-0.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): fénix black & grey, espalda completa
 - `negro_ttt-1.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): retrato realista en antebrazo
 - `negro_ttt-2.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): rostro con rosas, puntillismo en muslo
+- `negro_ttt-3.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): ángel anatómico en blackwork, pierna
+- `negro_ttt-4.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): ojo en blackwork, hombro
+- `negro_ttt-5.jpg` ← **REAL** — foto entregada por el estudio (oct 2026): retrato de perro en fine line, pierna
 - `santiarts-0.jpg` ← OCD Ink Studio (900x1200) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/03f0a74faaa4.jpg
 - `santiarts-2.jpg` ← 1MM Tattoo Studio (1080x1350) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a68dd3b60cb4.jpg
 - `santiarts-3.jpg` ← H2M Tattoo Studio (736x1104) https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7a2aa545113f.jpg

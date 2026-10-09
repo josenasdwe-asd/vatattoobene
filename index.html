@@ -316,17 +316,24 @@
   .cover-vis .cell img{width:100%;height:100%;object-fit:cover;object-position:center center;background:#0c0c0e;display:block;position:absolute;inset:0;padding:0}
   .cover-vis small{z-index:2;background:rgba(10,10,10,.65);padding:6px 0}
 
-  /* PROCESO */
-  .steps{margin-top:3rem;display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+  /* PROCESO — mockup 04: cabecera centrada + tarjetas independientes con icono, numero y flechas doradas */
+  .proc-head{text-align:center}
+  .proc-sub{font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--grey);margin-top:.9rem}
+  .steps{margin-top:3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.15rem}
   @media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
   @media(max-width:520px){.steps{grid-template-columns:1fr}}
-  .st{padding:2rem 1.6rem;border-left:1px solid var(--border)}
-  .st:first-child{border-left:none}
-  @media(max-width:860px){.st{border-top:1px solid var(--border)}}
-  .st b{font-family:var(--display);font-weight:400;font-size:2.2rem;color:transparent;-webkit-text-stroke:1px var(--gold);display:block}
-  .st h4{font-family:var(--display);font-weight:400;font-size:1.25rem;letter-spacing:.06em;margin:.7rem 0 .5rem}
-  .st p{font-size:.82rem;color:var(--grey)}
-  .st span{font-size:.6rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;display:block;margin-top:1rem}
+  .st{position:relative;background:linear-gradient(160deg,#181512 0%,#111010 55%,#0d0d0d 100%);border:1px solid #2b251d;border-radius:12px;padding:1.7rem 1.5rem;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+  .st:hover{transform:translateY(-5px);border-color:rgba(201,168,76,.55);box-shadow:0 18px 40px -18px rgba(0,0,0,.8)}
+  .st:not(:last-child)::after{content:'';position:absolute;top:50%;right:-.76rem;width:9px;height:9px;border-top:2px solid var(--gold);border-right:2px solid var(--gold);transform:translateY(-50%) rotate(45deg);opacity:.9;z-index:2}
+  @media(max-width:860px){.st:not(:last-child)::after{display:none}}
+  .st-top{display:flex;align-items:center;gap:.85rem;margin-bottom:1rem}
+  .st-ico{width:46px;height:46px;flex:none;border:1px solid rgba(201,168,76,.55);border-radius:50%;display:grid;place-items:center;color:var(--gold)}
+  .st-ico svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .st-nt b{font-family:var(--display);font-weight:400;font-size:1.45rem;color:var(--gold);display:block;line-height:1}
+  .st h4{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.08em;text-transform:uppercase;margin:.1rem 0 0}
+  .st p{font-size:.8rem;color:var(--grey);line-height:1.6}
+  .st-meta{font-size:.58rem;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:.45rem;margin-top:1.15rem;padding-top:.85rem;border-top:1px solid rgba(201,168,76,.18)}
+  .st-meta svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
   /* RESERVA — ticket vintage completo: arte del usuario como fondo, contenido sobre el papel */
   .book{position:relative;container-type:inline-size;margin:5rem auto 0;max-width:1080px;aspect-ratio:1365/768;border-radius:18px;overflow:hidden;
@@ -456,12 +463,28 @@
   .sec-bar h2{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,3.5vw,2.6rem);letter-spacing:.04em}
   .sec-bar h2 em{font-family:var(--serif);font-style:italic;color:var(--grey);font-size:.85em}
   .sec-bar .n{font-size:.65rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;white-space:nowrap}
-  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+  .quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
   .q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;min-width:0}
   .q .stars{color:var(--gold);letter-spacing:.15em;font-size:.85rem;margin-bottom:.8rem}
   .q p{font-family:var(--serif);font-style:italic;font-size:1.02rem;line-height:1.5;color:var(--white)}
   .q footer{margin-top:1rem;font-size:.72rem;letter-spacing:.08em;color:var(--grey)}
   .q footer b{color:var(--white);font-weight:500}
+  /* mockup 05: tarjeta con foto real de la casa + credito del artista */
+  .qr{display:flex;gap:1rem;padding:1.1rem}
+  .qph{position:relative;width:86px;flex:none;min-height:128px;border-radius:9px;overflow:hidden;border:1px solid #2b251d;background:#0c0c0e}
+  .qph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .qcr{position:absolute;left:0;right:0;bottom:0;z-index:2;background:rgba(8,8,8,.74);color:var(--gold);font-size:.5rem;letter-spacing:.1em;text-align:center;padding:3px 2px;font-family:var(--body)}
+  .qb{min-width:0;display:flex;flex-direction:column}
+  .qr .stars{font-size:.68rem;margin-bottom:.45rem}
+  .qr p{font-size:.82rem;line-height:1.45}
+  .qr footer{margin-top:auto;padding-top:.7rem;font-size:.6rem;line-height:1.5}
+  .qcta{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(160deg,#1a1611,#111010);border-color:rgba(201,168,76,.4)}
+  .qcta p{font-size:.95rem}
+  .qbtn{margin-top:1.1rem;padding:.75rem 1.3rem;border-radius:999px;background:linear-gradient(180deg,#dcc388,#bd9d55);color:#191304;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:filter .25s,transform .25s}
+  .qbtn:hover{filter:brightness(1.08);transform:translateY(-2px)}
+  .q-sign{text-align:right;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--gold-l);margin-top:1.6rem}
+  .gst{color:var(--gold);letter-spacing:.12em;font-weight:400;margin-right:.35rem}
+  .glogo{width:13px;height:13px;vertical-align:-2px;margin-left:.4rem}
 
   /* Pantallas grandes ≥1400px */
   @media(min-width:1400px){
@@ -532,9 +555,7 @@
     .cover-vis{min-height:220px}
     .cover-vis .cell{min-height:220px}
     .steps{grid-template-columns:1fr 1fr}
-    .st{padding:1.5rem 1.2rem;border-top:1px solid var(--border)}
-    .st:nth-child(odd){border-left:none}
-    .st:nth-child(-n+2){border-top:none}
+    .st{padding:1.5rem 1.2rem}
     .team{grid-template-columns:1fr 1fr;gap:.9rem}
     .mmenu{gap:1.1rem;padding:80px 20px 30px;overflow-y:auto}
     .mmenu a{font-size:clamp(1.7rem,7vw,2.2rem)}
@@ -591,10 +612,6 @@
     .proof{grid-template-columns:1fr;padding:0 16px}
     .pi + .pi{border-left:none;border-top:1px solid var(--border)}
     .steps{grid-template-columns:1fr}
-    .st{border-left:none;border-top:1px solid var(--border)}
-    .st:first-child{border-top:none}
-    .st:nth-child(-n+2){border-top:1px solid var(--border)}
-    .st:first-child{border-top:none}
     .team{grid-template-columns:1fr}
     .mbtns{flex-direction:column}
     .mbtn-wa{text-align:center}
@@ -723,25 +740,62 @@
 
 <section id="proceso" style="padding-top:2rem">
   <div class="wrap">
-    <span class="eyebrow">04 — Cómo se mueve</span>
-    <h2 class="sec">De la idea a la <em style="font-family:var(--serif);font-style:italic;color:var(--grey)">piel curada</em></h2>
+    <div class="proc-head rv">
+      <span class="eyebrow">04 — Cómo se mueve</span>
+      <h2 class="sec">De la idea a la <em style="font-family:var(--serif);font-style:italic;color:var(--gold-l)">piel curada</em></h2>
+      <p class="proc-sub">Un proceso simple, seguro y personalizado</p>
+    </div>
     <div class="steps">
-      <div class="st rv"><b>01</b><h4>Idea</h4><p>WhatsApp o Instagram: referencias, zona y tamaño.</p><span>Respuesta 24 h</span></div>
-      <div class="st rv"><b>02</b><h4>Dibujo</h4><p>Boceto único para tu cuerpo, ajustes incluidos.</p><span>Pieza única</span></div>
-      <div class="st rv"><b>03</b><h4>Sesión</h4><p>Estudio privado, material desechable, sin apuro.</p><span>60–240 min</span></div>
-      <div class="st rv"><b>04</b><h4>Curado</h4><p>Seguimiento a los 7 y 30 días, retoque incluido.</p><span>30 días</span></div>
+      <div class="st rv">
+        <div class="st-top"><span class="st-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span><div class="st-nt"><b>01</b><h4>Idea</h4></div></div>
+        <p>Cuéntanos tu idea, referencia o lo que tienes en mente. Te asesoramos sobre estilos, tamaño y ubicación.</p>
+        <span class="st-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Respondemos en 24 h</span>
+      </div>
+      <div class="st rv">
+        <div class="st-top"><span class="st-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span><div class="st-nt"><b>02</b><h4>Dibujo</h4></div></div>
+        <p>Creamos un boceto único para ti: cerrado, ajustado a tu idea y a tu estilo. Lo revisamos juntos antes de tocar la piel.</p>
+        <span class="st-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Pieza única</span>
+      </div>
+      <div class="st rv">
+        <div class="st-top"><span class="st-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div class="st-nt"><b>03</b><h4>Sesión</h4></div></div>
+        <p>Estudio privado, materiales desechables e higiene máxima. Tu seguridad es lo primero, sin apuro.</p>
+        <span class="st-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>60 – 240 min</span>
+      </div>
+      <div class="st rv">
+        <div class="st-top"><span class="st-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg></span><div class="st-nt"><b>04</b><h4>Curado</h4></div></div>
+        <p>Cuidados por escrito y seguimiento para que tu tatuaje sane perfecto y dure para siempre.</p>
+        <span class="st-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Seguimiento 30 días</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="curadas" style="padding-top:2rem">
   <div class="wrap">
-    <div class="sec-bar"><h2>05 / Curadas <em>— lo que dice Google</em></h2><span class="n">[ 5.0 ★ · 55 reseñas ]</span></div>
-    <div class="quotes">
-      <article class="q rv"><div class="stars">★★★★★</div><p>"Santiago did great job with our Fitz Roy tattoo! Dziękujemy!"</p><footer><b>Viajera de Polonia</b> — Fitz Roy · Google</footer></article>
-      <article class="q rv"><div class="stars">★★★★★</div><p>"Santiago es súper amable, nos escuchó y además habla francés. Lo recomendamos."</p><footer><b>Issa Nissa</b> — Francia · Google</footer></article>
-      <article class="q rv"><div class="stars">★★★★★</div><p>"Mi tatuador Santi siempre me ayuda a bajar mis ideas para que el tatuaje quede 10/10."</p><footer><b>Cliente habitual</b> — 5 piezas · Google</footer></article>
+    <div class="sec-bar">
+      <h2>05 / Curadas <em>— lo que dice Google</em></h2>
+      <span class="n"><b class="gst">★★★★★</b>5.0 — 55 reseñas<svg class="glogo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.3h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.8 2.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.8-2.9c-1 .7-2.4 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5l-3.9 3C3.3 21.3 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.7.4-2.4l-4-3C.5 8.2 0 10 0 12s.5 3.8 1.3 5.4l4-3z"/><path fill="#EA4335" d="M12 4.7c1.8 0 3 .8 3.6 1.4l3.4-3.3C17.9 1.1 15.2 0 12 0 7.3 0 3.3 2.7 1.3 6.6l4 3.1C6.2 6.8 8.9 4.7 12 4.7z"/></svg></span>
     </div>
+    <div class="quotes">
+      <article class="q qr rv">
+        <div class="qph"><img decoding="async" src="assets/img/santiago-gracia.jpg" alt="Santiago tatuando en el estudio VATATTOOBENE" loading="lazy" onerror="this.remove()"><span class="qcr">@santiarts</span></div>
+        <div class="qb"><div class="stars">★★★★★</div><p>"Santiago did great job with our Fitz Roy tattoo! Dziękujemy!"</p><footer><b>Viajera de Polonia</b> — Fitz Roy · Google</footer></div>
+      </article>
+      <article class="q qr rv">
+        <div class="qph"><img decoding="async" src="assets/ig/negro_ttt-5.jpg" alt="Perro en fine line, trabajo real de la casa" loading="lazy" onerror="this.remove()"><span class="qcr">@negro.ttt</span></div>
+        <div class="qb"><div class="stars">★★★★★</div><p>"Santiago es súper amable, nos escuchó y además habla francés. Lo recomendamos."</p><footer><b>Issa Nissa</b> — Francia · Google</footer></div>
+      </article>
+      <article class="q qr rv">
+        <div class="qph"><img decoding="async" src="assets/ig/negro_ttt-4.jpg" alt="Ojo en blackwork, trabajo real de la casa" loading="lazy" onerror="this.remove()"><span class="qcr">@negro.ttt</span></div>
+        <div class="qb"><div class="stars">★★★★★</div><p>"Mi tatuador Santi siempre me ayuda a bajar mis ideas para que el tatuaje quede 10/10."</p><footer><b>Cliente habitual</b> — 5 piezas · Google</footer></div>
+      </article>
+      <article class="q qcta rv">
+        <div class="stars">★★★★★</div>
+        <p>Tu historia podría ser la próxima que contamos aquí.</p>
+        <a class="qbtn" href="#reservar">Reservar tu cita →</a>
+      </article>
+    </div>
+    <p class="q-sign rv">Más que un tatuaje, es una historia en tu piel.</p>
   </div>
 </section>
 
@@ -938,7 +992,8 @@
   var crew = [
     { name:'SANTIAGO', handle:'santiarts', mono:'S.', pp:'pp-santiarts', loc:'Providencia — Fundador', founder:true, internal:'artistas/bene.html', fol:'12K seguidores',
       tags:['Fine-line','Blackwork','Cover-Up'] },
-    { name:'HÉCTOR', handle:'negro.ttt', mono:'H.', pp:'pp-negro_ttt', loc:'Providencia — Residente', fol:'4.1K seguidores' },
+    { name:'HÉCTOR', handle:'negro.ttt', mono:'H.', pp:'pp-negro_ttt', loc:'Providencia — Residente', fol:'4.1K seguidores',
+      tags:['Blackwork','Fine-line','Black & grey'] },
     { name:'DANIEL', handle:'daniel_zahav', mono:'D.', pp:'pp-daniel_zahav', loc:'Providencia — Residente', fol:'8.3K seguidores',
       tags:['Realismo','Microrealismo','Fine-line'] },
     { name:'VRIN', handle:'vrintattoo', mono:'V.', pp:'pp-vrintattoo', loc:'Providencia — Residente', fol:'3.5K seguidores' },

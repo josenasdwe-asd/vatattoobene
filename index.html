@@ -56,19 +56,6 @@
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "55" }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "¿Cómo agendo mi cita en VATATTOOBENE?", "acceptedAnswer": { "@type": "Answer", "text": "Escríbenos por WhatsApp con tu idea, la zona del cuerpo y el tamaño aproximado. Respondemos en 24 horas con diagnóstico honesto y presupuesto. Para bloquear la fecha se requiere una seña del 50%, que se descuenta del total." } },
-    { "@type": "Question", "name": "¿La seña se descuenta del total?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, la seña del 50% se descuenta del valor final de la pieza. Se pierde si la sesión se cancela con menos de 72 horas de aviso o si no asistes; con aviso anticipado se puede reprogramar." } },
-    { "@type": "Question", "name": "¿Puedo traer mi propio diseño?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. El artista adapta tu idea a tu piel y al estilo de la casa. Cada pieza se dibuja desde cero para un solo cuerpo — no repetimos diseños." } },
-    { "@type": "Question", "name": "¿Cuánto tarda en curar un tatuaje?", "acceptedAnswer": { "@type": "Answer", "text": "La curación superficial toma 2 a 4 semanas y la completa 2 a 3 meses. Entregamos los cuidados por escrito y hacemos seguimiento por WhatsApp durante el proceso." } },
-    { "@type": "Question", "name": "¿Hacen cover-ups?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, es una de las especialidades del estudio. Evaluamos tu tatuaje actual y te proponemos opciones realistas; si tu idea no va, te lo decimos antes de cobrarte." } }
-  ]
-}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -120,7 +107,7 @@
   /* HERO — imagen tigre + estudio como fondo (desktop premium) */
   .hero{position:relative;min-height:100svh;min-height:100dvh;display:flex;align-items:center;overflow:hidden;
     padding:clamp(96px,12vh,140px) 0 clamp(48px,7vh,84px);text-align:left;
-    background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.04) 36%,rgba(5,5,5,.28) 58%,rgba(5,5,5,.55) 78%,rgba(5,5,5,.68) 100%),
+    background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.04) 36%,rgba(5,5,5,.34) 58%,rgba(5,5,5,.66) 78%,rgba(5,5,5,.84) 100%),
                url('assets/img/hero-bg.jpg') 30% center/cover no-repeat,
                url('assets/img/hero-studio.svg') center/cover no-repeat,#0a0a0a}
   .hero::before{content:'';position:absolute;inset:0;pointer-events:none;
@@ -131,11 +118,8 @@
     align-items:center;gap:clamp(24px,3.5vw,64px);width:100%;max-width:1600px;margin:0 auto;padding:0 clamp(24px,4vw,64px)}
   .hero-mark{display:flex;align-items:center;justify-content:center;min-width:0;min-height:64vh}
   .hero-photo{display:none}
+  /* la copia vive directo sobre la foto: sin caja; el degradado del .hero protege la lectura */
   .hero-copy{max-width:640px;min-width:0;margin:0 auto;text-align:center;color:#f5f1e8;
-    padding:clamp(28px,3vw,44px) clamp(20px,2.4vw,40px);border-radius:18px;
-    background:linear-gradient(180deg,rgba(8,8,8,.68),rgba(8,8,8,.52));
-    border:1px solid rgba(201,168,76,.3);box-shadow:0 30px 80px rgba(0,0,0,.5);
-    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
     text-shadow:0 2px 16px rgba(0,0,0,.92),0 0 2px rgba(0,0,0,.9)}
   .hero-eyebrow{display:flex;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:1.9rem;
     font-family:var(--body);font-weight:400;font-size:.7rem;letter-spacing:.5em;text-transform:uppercase;color:#f5f1e8;text-indent:.5em;white-space:nowrap}
@@ -381,18 +365,6 @@
   .tk-send{grid-column:1/-1;justify-self:center;width:min(62%,43.5cqw);justify-content:center;margin-top:.44cqw;cursor:pointer;border:0;padding:max(.86cqw,.5rem) 2.07cqw;font-size:max(.98cqw,.62rem);box-shadow:0 3px 0 rgba(15,73,38,.35)}
   .tk-send:active{transform:scale(.98)}
 
-  /* FAQ — dudas frecuentes */
-  .faq-grid{max-width:840px;margin:2.6rem auto 0}
-  .faq-t{font-family:var(--display);font-weight:400;font-size:1.2rem;letter-spacing:.1em;color:var(--gold);margin-bottom:1rem;text-transform:uppercase}
-  details.fq{border-bottom:1px solid var(--border)}
-  details.fq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 2px;
-    font-family:var(--display);font-weight:400;font-size:1.08rem;letter-spacing:.05em;color:var(--white)}
-  details.fq summary::-webkit-details-marker{display:none}
-  details.fq summary::after{content:'+';color:var(--gold);font-size:1.35rem;line-height:1;transition:transform .25s}
-  details.fq[open] summary::after{transform:rotate(45deg)}
-  details.fq summary:hover{color:var(--gold)}
-  details.fq p{padding:0 2px 1.15rem;color:var(--grey);font-size:.85rem;line-height:1.8;max-width:62ch}
-
   /* UBICACIÓN — mapa */
   .map-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:1.4rem;margin-top:2.6rem;align-items:stretch}
   .map-info{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.9rem;display:flex;flex-direction:column;gap:1rem}
@@ -437,34 +409,12 @@
   h2.sec,.book h2,.abody h3{text-wrap:balance;overflow-wrap:anywhere}
   section{scroll-margin-top:70px}
 
-  /* Curadas — faltaba su CSS */
+  /* barra de sección (la usa #visita) */
   .sec-bar{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;
     border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem .2rem;margin-bottom:2rem}
   .sec-bar h2{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,3.5vw,2.6rem);letter-spacing:.04em}
   .sec-bar h2 em{font-family:var(--serif);font-style:italic;color:var(--grey);font-size:.85em}
   .sec-bar .n{font-size:.65rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;white-space:nowrap}
-  .quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
-  .q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.6rem;min-width:0}
-  .q .stars{color:var(--gold);letter-spacing:.15em;font-size:.85rem;margin-bottom:.8rem}
-  .q p{font-family:var(--serif);font-style:italic;font-size:1.02rem;line-height:1.5;color:var(--white)}
-  .q footer{margin-top:1rem;font-size:.72rem;letter-spacing:.08em;color:var(--grey)}
-  .q footer b{color:var(--white);font-weight:500}
-  /* mockup 05: tarjeta con foto real de la casa + credito del artista */
-  .qr{display:flex;gap:1rem;padding:1.1rem}
-  .qph{position:relative;width:86px;flex:none;min-height:128px;border-radius:9px;overflow:hidden;border:1px solid #2b251d;background:#0c0c0e}
-  .qph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .qcr{position:absolute;left:0;right:0;bottom:0;z-index:2;background:rgba(8,8,8,.74);color:var(--gold);font-size:.5rem;letter-spacing:.1em;text-align:center;padding:3px 2px;font-family:var(--body)}
-  .qb{min-width:0;display:flex;flex-direction:column}
-  .qr .stars{font-size:.68rem;margin-bottom:.45rem}
-  .qr p{font-size:.82rem;line-height:1.45}
-  .qr footer{margin-top:auto;padding-top:.7rem;font-size:.6rem;line-height:1.5}
-  .qcta{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(160deg,#1a1611,#111010);border-color:rgba(201,168,76,.4)}
-  .qcta p{font-size:.95rem}
-  .qbtn{margin-top:1.1rem;padding:.75rem 1.3rem;border-radius:999px;background:linear-gradient(180deg,#dcc388,#bd9d55);color:#191304;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:filter .25s,transform .25s}
-  .qbtn:hover{filter:brightness(1.08);transform:translateY(-2px)}
-  .q-sign{text-align:right;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--gold-l);margin-top:1.6rem}
-  .gst{color:var(--gold);letter-spacing:.12em;font-weight:400;margin-right:.35rem}
-  .glogo{width:13px;height:13px;vertical-align:-2px;margin-left:.4rem}
 
   /* Pantallas grandes ≥1400px */
   @media(min-width:1400px){
@@ -478,8 +428,6 @@
     .cover{margin-top:6rem}
     .cover-vis{min-height:340px}
     .cover-vis .cell{min-height:340px}
-    .quotes{gap:1.6rem}
-    .q{padding:2rem}
   }
 
   /* Ultrawide ≥1700px — máxima nitidez */
@@ -488,10 +436,10 @@
     .hero{padding:0}
     .hero-inner{max-width:1800px;gap:clamp(32px,4vw,88px);padding:0 clamp(32px,4vw,72px)}
     .hero-mark{min-height:86vh}
-    .hero{background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.05) 40%,rgba(5,5,5,.32) 62%,rgba(5,5,5,.58) 80%,rgba(5,5,5,.7) 100%),
+    .hero{background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.05) 40%,rgba(5,5,5,.4) 62%,rgba(5,5,5,.7) 80%,rgba(5,5,5,.86) 100%),
       url('assets/img/hero-bg.jpg') 28% center/cover no-repeat,#0a0a0a}
-    .hero-copy{max-width:680px}
-    .hero-copy h1{font-size:clamp(2.6rem,2.6vw,4rem)}
+    .hero-copy{max-width:720px}
+    .hero-copy h1{font-size:clamp(2.6rem,2.6vw,3.4rem)}
     .hero-cta{min-width:380px;padding:21px 48px;font-size:.74rem}
   }
 
@@ -515,7 +463,6 @@
   /* Tablet ≤980px */
   @media(max-width:980px){
     section{padding:3.8rem 0}
-    .quotes{grid-template-columns:1fr 1fr}
     .modal-works{grid-template-columns:repeat(3,1fr)}
   }
 
@@ -530,7 +477,6 @@
     .pi b{font-size:clamp(1.7rem,7vw,2.4rem)}
     .pi span{font-size:.52rem;letter-spacing:.14em}
     .pi em{font-size:.68rem}
-    .quotes{grid-template-columns:1fr}
     .cover{margin-top:3rem}
     .cover-vis{min-height:220px}
     .cover-vis .cell{min-height:220px}
@@ -642,7 +588,6 @@
   <a href="#coverup" onclick="document.getElementById('mmenu').classList.remove('open')">Cover-Up</a>
   <a href="#proceso" onclick="document.getElementById('mmenu').classList.remove('open')">Proceso</a>
   <a href="#reservar" onclick="document.getElementById('mmenu').classList.remove('open')">Reservar</a>
-  <a href="#faq" onclick="document.getElementById('mmenu').classList.remove('open')">FAQ</a>
   <a href="#visita" onclick="document.getElementById('mmenu').classList.remove('open')">Ubicación</a>
   <a class="m-cta" href="https://wa.me/56920531438?text=Hola%20VATATTOOBENE%2C%20quiero%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
   <a href="#" onclick="document.getElementById('mmenu').classList.remove('open');return false" style="font-size:1rem;letter-spacing:.2em;opacity:.6">✕ CERRAR</a>
@@ -748,35 +693,6 @@
   </div>
 </section>
 
-<section id="curadas" style="padding-top:2rem">
-  <div class="wrap">
-    <div class="sec-bar">
-      <h2>05 / Curadas <em>— lo que dice Google</em></h2>
-      <span class="n"><b class="gst">★★★★★</b>5.0 — 55 reseñas<svg class="glogo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.9-.1-1.5-.3-2.2H12v4.3h6.5c-.1 1.1-.8 2.7-2.4 3.8l3.8 2.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.8-2.9c-1 .7-2.4 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5l-3.9 3C3.3 21.3 7.3 24 12 24z"/><path fill="#FBBC05" d="M5.3 14.4c-.2-.7-.4-1.5-.4-2.4s.1-1.7.4-2.4l-4-3C.5 8.2 0 10 0 12s.5 3.8 1.3 5.4l4-3z"/><path fill="#EA4335" d="M12 4.7c1.8 0 3 .8 3.6 1.4l3.4-3.3C17.9 1.1 15.2 0 12 0 7.3 0 3.3 2.7 1.3 6.6l4 3.1C6.2 6.8 8.9 4.7 12 4.7z"/></svg></span>
-    </div>
-    <div class="quotes">
-      <article class="q qr rv">
-        <div class="qph"><img decoding="async" src="assets/img/santiago-gracia.jpg" alt="Santiago tatuando en el estudio VATATTOOBENE" loading="lazy" onerror="this.remove()"><span class="qcr">@santiarts</span></div>
-        <div class="qb"><div class="stars">★★★★★</div><p>"Santiago did great job with our Fitz Roy tattoo! Dziękujemy!"</p><footer><b>Viajera de Polonia</b> — Fitz Roy · Google</footer></div>
-      </article>
-      <article class="q qr rv">
-        <div class="qph"><img decoding="async" src="assets/ig/negro_ttt-5.jpg" alt="Perro en fine line, trabajo real de la casa" loading="lazy" onerror="this.remove()"><span class="qcr">@negro.ttt</span></div>
-        <div class="qb"><div class="stars">★★★★★</div><p>"Santiago es súper amable, nos escuchó y además habla francés. Lo recomendamos."</p><footer><b>Issa Nissa</b> — Francia · Google</footer></div>
-      </article>
-      <article class="q qr rv">
-        <div class="qph"><img decoding="async" src="assets/ig/negro_ttt-4.jpg" alt="Ojo en blackwork, trabajo real de la casa" loading="lazy" onerror="this.remove()"><span class="qcr">@negro.ttt</span></div>
-        <div class="qb"><div class="stars">★★★★★</div><p>"Mi tatuador Santi siempre me ayuda a bajar mis ideas para que el tatuaje quede 10/10."</p><footer><b>Cliente habitual</b> — 5 piezas · Google</footer></div>
-      </article>
-      <article class="q qcta rv">
-        <div class="stars">★★★★★</div>
-        <p>Tu historia podría ser la próxima que contamos aquí.</p>
-        <a class="qbtn" href="#reservar">Reservar tu cita →</a>
-      </article>
-    </div>
-    <p class="q-sign rv">Más que un tatuaje, es una historia en tu piel.</p>
-  </div>
-</section>
-
 <section id="reservar" style="padding-top:2rem">
   <div class="wrap">
     <div class="res-head rv">
@@ -835,44 +751,9 @@
   </div>
 </section>
 
-<section id="faq" style="padding-top:2rem">
-  <div class="wrap">
-    <div class="sec-bar rv"><h2>06 / Preguntas <em>— antes de la tinta</em></h2><span class="n">[ FAQ ]</span></div>
-    <div class="faq-grid">
-      <div class="rv">
-        <h3 class="faq-t" data-es="Dudas frecuentes" data-en="Common questions">Dudas frecuentes</h3>
-        <details class="fq">
-          <summary data-es="¿Cómo agendo mi cita?" data-en="How do I book?">¿Cómo agendo mi cita?</summary>
-          <p data-es="Escríbenos por WhatsApp con tu idea, zona y tamaño. En 24 horas te respondemos con diagnóstico honesto y presupuesto. La fecha se bloquea con una seña del 50% que se descuenta del total." data-en="Message us on WhatsApp with your idea, placement and size. Within 24 hours we reply with an honest assessment and quote. Your date is locked with a 50% deposit that counts toward the total.">Escríbenos por WhatsApp con tu idea, zona y tamaño. En 24 horas te respondemos con diagnóstico honesto y presupuesto. La fecha se bloquea con una seña del 50% que se descuenta del total.</p>
-        </details>
-        <details class="fq">
-          <summary data-es="¿Qué incluye el presupuesto?" data-en="What does the quote include?">¿Qué incluye el presupuesto?</summary>
-          <p data-es="El diseño personalizado dibujado para tu cuerpo, la sesión y el material. La cotización queda cerrada antes de agendar; si el diseño cambia, se recotiza antes de la tinta — nunca sobre la silla." data-en="The custom design drawn for your body, the session and materials. The quote is locked before booking; if the design changes, it's re-quoted before any ink — never mid-session.">El diseño personalizado dibujado para tu cuerpo, la sesión y el material. La cotización queda cerrada antes de agendar; si el diseño cambia, se recotiza antes de la tinta — nunca sobre la silla.</p>
-        </details>
-        <details class="fq">
-          <summary data-es="¿La seña se descuenta?" data-en="Is the deposit refunded?">¿La seña se descuenta?</summary>
-          <p data-es="Sí, se descuenta del valor final. Se pierde si cancelas con menos de 72 horas o no asistes; con aviso anticipado puedes reprogramar sin costo una vez." data-en="Yes, it counts toward the final price. It's forfeited if you cancel with less than 72 hours' notice or no-show; with enough notice you can reschedule once at no cost.">Sí, se descuenta del valor final. Se pierde si cancelas con menos de 72 horas o no asistes; con aviso anticipado puedes reprogramar sin costo una vez.</p>
-        </details>
-        <details class="fq">
-          <summary data-es="¿Puedo traer mi propio diseño?" data-en="Can I bring my own design?">¿Puedo traer mi propio diseño?</summary>
-          <p data-es="Sí. El artista adapta tu idea a tu piel y al estilo de la casa. Cada pieza se dibuja desde cero para un solo cuerpo — no repetimos diseños." data-en="Yes. The artist adapts your idea to your skin and the house style. Every piece is drawn from scratch for one body only — we never repeat designs.">Sí. El artista adapta tu idea a tu piel y al estilo de la casa. Cada pieza se dibuja desde cero para un solo cuerpo — no repetimos diseños.</p>
-        </details>
-        <details class="fq">
-          <summary data-es="¿Cuánto tarda en curar?" data-en="How long does healing take?">¿Cuánto tarda en curar?</summary>
-          <p data-es="La superficie cura en 2–4 semanas; la curación completa toma 2–3 meses. Entregamos los cuidados por escrito y hacemos seguimiento por WhatsApp durante todo el proceso." data-en="The surface heals in 2–4 weeks; full healing takes 2–3 months. You get written aftercare instructions and WhatsApp follow-up throughout.">La superficie cura en 2–4 semanas; la curación completa toma 2–3 meses. Entregamos los cuidados por escrito y hacemos seguimiento por WhatsApp durante todo el proceso.</p>
-        </details>
-        <details class="fq">
-          <summary data-es="¿Hacen cover-ups?" data-en="Do you do cover-ups?">¿Hacen cover-ups?</summary>
-          <p data-es="Sí, es especialidad de la casa. Evaluamos tu tatuaje actual y te proponemos opciones realistas; si tu idea no va, te lo decimos antes de cobrarte." data-en="Yes — it's one of our specialties. We assess your existing tattoo and propose realistic options; if your idea won't work, we tell you before charging you.">Sí, es especialidad de la casa. Evaluamos tu tatuaje actual y te proponemos opciones realistas; si tu idea no va, te lo decimos antes de cobrarte.</p>
-        </details>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="visita" style="padding-top:2rem">
   <div class="wrap">
-    <div class="sec-bar rv"><h2>07 / Ubicación <em>— el estudio</em></h2><span class="n" data-es="[ Solo con cita ]" data-en="[ Appointment only ]">[ Solo con cita ]</span></div>
+    <div class="sec-bar rv"><h2>05 / Ubicación <em>— el estudio</em></h2><span class="n" data-es="[ Solo con cita ]" data-en="[ Appointment only ]">[ Solo con cita ]</span></div>
     <div class="map-grid">
       <div class="map-info rv">
         <h3 data-es="Te esperamos en la silla" data-en="Waiting for you in the chair">Te esperamos en la silla</h3>
@@ -892,7 +773,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div><img class="flogo" src="assets/img/logo-footer.png" alt="VATATTOOBENE — tigre de ojos ámbar, logo del estudio" width="520" height="293" loading="lazy" onerror="this.style.display='none'"><p style="margin-top:1.1rem;max-width:30ch" data-es="Estudio boutique — Providencia, Santiago. Línea fina · Blackwork · Cover-up." data-en="Boutique studio — Santiago, Chile. Fine-line · Blackwork · Cover-up.">Estudio boutique — Providencia, Santiago. Línea fina · Blackwork · Cover-up.</p></div>
-      <div class="fcol"><b data-es="Navegar" data-en="Browse">Navegar</b><a href="#equipo" data-es="Equipo" data-en="Crew">Equipo</a><a href="#coverup">Cover-Up</a><a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a><a href="#reservar" data-es="Reservar" data-en="Book">Reservar</a><a href="#faq">FAQ</a><a href="#visita" data-es="Ubicación" data-en="Location">Ubicación</a></div>
+      <div class="fcol"><b data-es="Navegar" data-en="Browse">Navegar</b><a href="#equipo" data-es="Equipo" data-en="Crew">Equipo</a><a href="#coverup">Cover-Up</a><a href="#proceso" data-es="Proceso" data-en="Process">Proceso</a><a href="#reservar" data-es="Reservar" data-en="Book">Reservar</a><a href="#visita" data-es="Ubicación" data-en="Location">Ubicación</a></div>
       <div class="fcol"><b>Contacto</b><a href="https://wa.me/56920531438" target="_blank" rel="noopener">+56 9 2053 1438</a><a href="https://www.instagram.com/vatattoobene/" target="_blank" rel="noopener">@vatattoobene</a><p>José Arrieta 96, Santiago<br>Lun–Dom 11:00–20:00 · Solo con cita</p></div>
     </div>
     <div class="legal"><span>© 2026 Vatattoobene — Santiago, Chile</span><span>Tatuaje fine-line · Blackwork · Cover-up Santiago</span></div>

@@ -191,51 +191,28 @@
   h2.sec{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,5vw,4.6rem);line-height:.95;text-align:center}
   .sec-sub{font-family:var(--serif);font-style:italic;color:var(--grey);text-align:center;font-size:1.05rem;margin-top:.6rem}
 
-  /* EQUIPO — personalidad VATATTOOBENE */
+  /* EQUIPO — carta minimalista: foto + nombre + forma de tatuar; el resto vive en el portfolio */
   .team{margin-top:3rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
   @media(max-width:900px){.team{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.team{grid-template-columns:1fr}}
-  .member{position:relative;background:linear-gradient(180deg,#171717 0%,#0f0f10 100%);border:1px solid #2a2a2a;border-radius:14px;overflow:hidden;cursor:pointer;
+  .member{position:relative;background:#0f0f10;border:1px solid #232323;border-radius:14px;overflow:hidden;
     transition:border-color .3s,transform .3s,box-shadow .3s}
-  .member:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.55),0 0 0 1px rgba(201,168,76,.35)}
-  .member.founder{border-color:rgba(201,168,76,.65);background:linear-gradient(180deg,rgba(201,168,76,.12),rgba(201,168,76,.03) 40%,#101010 100%)}
-  .mphoto{aspect-ratio:1/1.02;display:grid;place-items:center;position:relative;overflow:hidden;
-    background:radial-gradient(320px 240px at 50% 32%,rgba(201,168,76,.16),transparent 65%),#0c0c0e}
-  .mphoto::before{content:'';position:absolute;inset:0;opacity:.1;pointer-events:none;
-    background:repeating-linear-gradient(-55deg,transparent 0 14px,rgba(201,168,76,.5) 14px 15px)}
-  .mphoto::after{content:'VB';position:absolute;right:10px;bottom:34px;font-family:var(--display);font-size:64px;
-    color:transparent;-webkit-text-stroke:1px rgba(201,168,76,.28);letter-spacing:.05em;pointer-events:none}
-  .mphoto .mono{font-family:var(--display);font-size:clamp(88px,9vw,132px);color:transparent;-webkit-text-stroke:1.5px var(--gold);line-height:1;position:relative;z-index:1;
-    transition:.3s}
-  .member:hover .mono{color:rgba(201,168,76,.14)}
-  .mphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;background:#0e0e10;padding:0;filter:grayscale(.15) contrast(1.06);transition:transform .6s ease;z-index:1}
-  .member:hover .mphoto img{transform:scale(1.05)}
-  .mnum{position:absolute;top:12px;right:14px;z-index:2;font-family:var(--display);font-size:1.3rem;letter-spacing:.1em;
-    color:transparent;-webkit-text-stroke:1px rgba(240,237,232,.4)}
-  .mphoto .founder{z-index:2}
-  .mphoto .cap{z-index:2;background:rgba(8,8,8,.72);backdrop-filter:blur(3px);padding:6px 0;border-top:1px solid rgba(201,168,76,.25)}
-  .mphoto .cap{position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:.6rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase}
-  .mphoto .founder{position:absolute;top:12px;left:12px;font-size:.56rem;letter-spacing:.2em;background:var(--gold);color:#000;
-    padding:.4rem .75rem;border-radius:999px;text-transform:uppercase;font-weight:500}
-  .mbody{padding:1.3rem 1.3rem 1.4rem;border-top:1px solid var(--border);position:relative}
-  .mbody::before{content:'';position:absolute;top:-1px;left:0;width:56px;height:2px;background:var(--gold)}
-  .member.founder .mbody::before{width:100%;background:linear-gradient(90deg,var(--gold),transparent)}
-  .mbody .loc{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
-  .mbody h3{font-family:var(--display);font-weight:400;font-size:2.1rem;letter-spacing:.05em;margin:.35rem 0 .3rem;overflow-wrap:anywhere;line-height:1}
-  .mbody h3 small{font-family:var(--serif);font-style:italic;font-size:.9rem;color:var(--grey);letter-spacing:0;display:block;margin-top:.15rem}
-  .mbody .fol{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey);margin:2px 0 8px}
-  .mbody .fol b{color:var(--gold);font-weight:500}
-  .mstyles{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem;min-height:1.4rem}
-  .mstyles span{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(201,168,76,.4);
-    padding:.32rem .7rem;border-radius:999px;color:var(--gold)}
-  .mstyles span.house{border-color:var(--border);color:var(--grey);font-style:italic;text-transform:none;letter-spacing:.04em;font-size:.72rem}
-  .mbtns{display:flex;gap:.5rem}
-  .mbtn-port{flex:1;background:var(--gold);color:#000;font-family:var(--display);font-size:1.05rem;letter-spacing:.14em;
-    padding:.6rem;border:none;border-radius:8px;cursor:pointer;text-transform:uppercase;text-decoration:none;text-align:center;transition:.25s}
-  .mbtn-port:hover{background:var(--gold-l)}
-  .mbtn-wa{background:transparent;border:1px solid #2e2e2e;color:var(--white);font-size:.62rem;font-weight:500;letter-spacing:.1em;padding:.6rem .9rem;
-    border-radius:8px;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:.25s}
-  .mbtn-wa:hover{border-color:var(--green);color:#fff;background:rgba(37,211,102,.12)}
+  .member:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,.5)}
+  .member.founder{border-color:rgba(201,168,76,.55)}
+  .mlnk{display:block;position:relative;text-decoration:none;color:var(--white)}
+  .mphoto{aspect-ratio:1/1;position:relative;overflow:hidden;background:#0c0c0e}
+  .mphoto img{width:100%;height:100%;object-fit:cover;object-position:center center;background:#0e0e10;
+    filter:grayscale(.15) contrast(1.06);transition:transform .6s ease}
+  .member:hover .mphoto img{transform:scale(1.04)}
+  .mtxt{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:2.8rem 1.1rem 1.05rem;
+    background:linear-gradient(180deg,transparent,rgba(6,6,7,.62) 42%,rgba(6,6,7,.93))}
+  .mtxt h3{font-family:var(--display);font-weight:400;font-size:1.5rem;letter-spacing:.07em;line-height:1;margin:0;overflow-wrap:anywhere;
+    text-shadow:0 1px 12px rgba(0,0,0,.6)}
+  .mtxt .mstyle{display:block;margin-top:.32rem;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);
+    text-shadow:0 1px 8px rgba(0,0,0,.75)}
+  .marrow{position:absolute;top:.85rem;right:.95rem;z-index:2;font-family:var(--display);font-size:1.1rem;color:var(--gold);
+    opacity:0;transform:translate(-5px,5px);transition:.3s}
+  .member:hover .marrow{opacity:1;transform:none}
 
   /* linea de aguja: progreso de la sesion */
   .ink-bar{position:absolute;left:0;bottom:0;height:2px;width:0;z-index:210;pointer-events:none;opacity:0;
@@ -379,10 +356,12 @@
   .tk-eyes i{position:absolute;border-radius:50%;mix-blend-mode:screen;filter:blur(3px) saturate(1.35);
     background:radial-gradient(closest-side,rgba(255,212,105,1) 0%,rgba(255,165,35,.78) 42%,rgba(255,120,0,.34) 62%,rgba(255,120,0,0) 80%);
     animation:eyeFlicker 2.6s ease-in-out infinite}
-  /* centros medidos sobre book-ticket.jpg 1365x768: ojo izq (70.1%,37.1%), ojo der (83.8%,35.6%) */
-  .tk-eyes i:nth-child(1){left:67.7%;top:35.5%;width:4.7%;aspect-ratio:1.5/1}
-  .tk-eyes i:nth-child(2){left:81.6%;top:34.2%;width:4.3%;aspect-ratio:1.5/1;animation-delay:1.3s}
-  @keyframes eyeFlicker{0%,100%{opacity:.8;transform:scale(1)}45%{opacity:1;transform:scale(1.14)}}
+  /* centros reales medidos por deteccion de pixeles ambar sobre book-ticket.jpg 1365x768:
+     ojo izq (70.05%,37.0%) bbox 44x23px, ojo der (83.8%,35.5%) bbox 22x19px.
+     left/top = centro del brillo; translate(-50%,-50%) lo centra en ese punto. */
+  .tk-eyes i:nth-child(1){left:70.05%;top:37%;width:4.7%;aspect-ratio:1.5/1;transform:translate(-50%,-50%)}
+  .tk-eyes i:nth-child(2){left:83.8%;top:35.5%;width:4.3%;aspect-ratio:1.5/1;transform:translate(-50%,-50%);animation-delay:1.3s}
+  @keyframes eyeFlicker{0%,100%{opacity:.8;transform:translate(-50%,-50%) scale(1)}45%{opacity:1;transform:translate(-50%,-50%) scale(1.14)}}
   @media(prefers-reduced-motion:reduce){.tk-eyes i{animation:none}}
 
   /* BOLETO — formulario pre-llenado de WhatsApp */
@@ -614,8 +593,6 @@
     .pi + .pi{border-left:none;border-top:1px solid var(--border)}
     .steps{grid-template-columns:1fr}
     .team{grid-template-columns:1fr}
-    .mbtns{flex-direction:column}
-    .mbtn-wa{text-align:center}
     .cover-vis{grid-template-columns:1fr}
     .cover-vis .after{border-left:none;border-top:1px solid var(--border)}
     .hero-sub{white-space:normal}
@@ -988,62 +965,38 @@
     ola: svg('<path d="M10 70 Q25 50 40 70 T70 70 T100 70"/><path d="M10 85 Q25 65 40 85 T70 85 T100 85"/>')
   };
 
-  /* equipo: 12 artistas reales (bio IG @vatattoobene) */
-  var WA = 'https://wa.me/56920531438?text=';
+  /* equipo: 12 artistas reales (bio IG @vatattoobene) — carta minimalista, el detalle vive en el portfolio */
   var crew = [
-    { name:'SANTIAGO', handle:'santiarts', mono:'S.', pp:'pp-santiarts', loc:'Providencia — Fundador', founder:true, internal:'artistas/bene.html', fol:'12K seguidores',
-      tags:['Fine-line','Blackwork','Cover-Up'] },
-    { name:'HÉCTOR', handle:'negro.ttt', mono:'H.', pp:'pp-negro_ttt', loc:'Providencia — Residente', fol:'4.1K seguidores',
-      tags:['Blackwork','Fine-line','Black & grey'] },
-    { name:'DANIEL', handle:'daniel_zahav', mono:'D.', pp:'pp-daniel_zahav', loc:'Providencia — Residente', fol:'8.3K seguidores',
-      tags:['Realismo','Microrealismo','Fine-line'] },
-    { name:'VRIN', handle:'vrintattoo', mono:'V.', pp:'pp-vrintattoo', loc:'Providencia — Residente', fol:'3.5K seguidores' },
-    { name:'KARLA', handle:'nigaitattoo', mono:'K.', pp:'pp-nigaitattoo', loc:'Providencia — Residente', fol:'17K seguidores' },
-    { name:'CHIWI', handle:'chiwiblacktattoo', mono:'C.', pp:'pp-chiwiblacktattoo', loc:'Providencia — Residente', fol:'8.7K seguidores',
-      tags:['Blackwork'] },
-    { name:'CATA', handle:'bycatatts_', mono:'C.', pp:'pp-bycatatts_', loc:'Providencia — Residente', fol:'644 seguidores' },
-    { name:'MERT', handle:'mertvynk', mono:'M.', pp:'pp-mertvynk', loc:'Providencia — Residente', fol:'2K seguidores', thumbIndex:1 },
-    { name:'FIONA', handle:'fionainks', mono:'F.', pp:'pp-fionainks', loc:'Providencia — Residente', fol:'843 seguidores' },
-    { name:'DAVID', handle:'david_vrvyv', mono:'D.', pp:'pp-david_vrvyv', loc:'Providencia — Residente', fol:'5K seguidores' },
-    { name:'IGNACIA', handle:'demoniart', mono:'I.', pp:'pp-demoniart', loc:'Providencia — Residente', fol:'16K seguidores' },
-    { name:'MICKY', handle:'micky_artt', mono:'M.', pp:'pp-micky_artt', loc:'Providencia — Residente', fol:'407 seguidores' }
+    { name:'SANTIAGO', handle:'santiarts', founder:true, tags:['Fine-line','Blackwork','Cover-Up'] },
+    { name:'HÉCTOR', handle:'negro.ttt', tags:['Blackwork','Fine-line','Black & grey'] },
+    { name:'DANIEL', handle:'daniel_zahav', tags:['Realismo','Microrealismo','Fine-line'] },
+    { name:'VRIN', handle:'vrintattoo' },
+    { name:'KARLA', handle:'nigaitattoo' },
+    { name:'CHIWI', handle:'chiwiblacktattoo', tags:['Blackwork'] },
+    { name:'CATA', handle:'bycatatts_' },
+    { name:'MERT', handle:'mertvynk', thumbIndex:1 },
+    { name:'FIONA', handle:'fionainks' },
+    { name:'DAVID', handle:'david_vrvyv' },
+    { name:'IGNACIA', handle:'demoniart' },
+    { name:'MICKY', handle:'micky_artt' }
   ];
   var team = document.getElementById('team');
-  crew.forEach(function(m, i){
+  crew.forEach(function(m){
     var routeSlug = (m.handle === 'santiarts') ? 'bene' : m.handle.replace(/\./g, '_');
     var imageSlug = m.handle.replace(/\./g, '_');
     var imageIndex = m.thumbIndex || 0;
-    var href = 'artistas/' + routeSlug + '.html';
-    var num = ('0' + (i + 1)).slice(-2);
-    var role = m.founder ? 'Fundador — Fine-line / Blackwork' : (m.tags ? m.tags.join(' · ') : 'Residente — Providencia');
     var card = document.createElement('article');
     card.className = 'member rv' + (m.founder ? ' founder' : '');
     card.innerHTML =
-      '<div class="mphoto">' +
-        (m.founder ? '<span class="founder">★ Fundador</span>' : '<span class="mnum">' + num + '</span>') +
-        '<img decoding="async" src="assets/ig/' + imageSlug + '-' + imageIndex + '.jpg" alt="Portfolio de ' + m.name + ' — VATATTOOBENE" loading="lazy" onerror="this.remove()">' +
-        '<span class="mono">' + m.mono + '</span>' +
-        '<span class="cap">@' + m.handle + '</span>' +
-      '</div>' +
-      '<div class="mbody"><span class="loc">' + m.loc + '</span><h3>' + m.name + '<small>' + role + '</small></h3>' +
-      '<div class="fol"><b>' + m.fol.split(' ')[0] + '</b> ' + m.fol.split(' ').slice(1).join(' ') + ' en Instagram</div>' +
-      (m.tags
-        ? '<div class="mstyles">' + m.tags.map(function(t){ return '<span>' + t + '</span>'; }).join('') + '</div>'
-        : '<div class="mstyles"><span class="house">Residente VATATTOOBENE</span></div>') +
-      '<div class="mbtns"><a class="mbtn-port" href="' + href + '">Ver portfolio →</a>' +
-      '<a class="mbtn-wa" href="' + WA + encodeURIComponent('Hola, quiero cotizar con @' + m.handle) + '" target="_blank" rel="noopener">Cotizar</a></div></div>';
+      '<a class="mlnk" href="artistas/' + routeSlug + '.html" aria-label="Portfolio de ' + m.name + ' — VATATTOOBENE">' +
+        '<div class="mphoto"><img decoding="async" src="assets/ig/' + imageSlug + '-' + imageIndex + '.jpg" alt="Tatuaje de ' + m.name + ' (@' + m.handle + ')" loading="lazy" onerror="this.remove()"></div>' +
+        '<span class="marrow" aria-hidden="true">→</span>' +
+        '<div class="mtxt"><h3>' + m.name + '</h3>' +
+        (m.tags ? '<span class="mstyle">' + m.tags.join(' · ') + '</span>' : '') +
+        '</div></a>';
     team.appendChild(card);
   });
   watchRv(team);
-
-  /* página personal (Santiago) o Instagram real del artista */
-  team.addEventListener('click', function(e){
-    if(e.target.closest('a')) return;
-    var card = e.target.closest('.member');
-    if(!card) return;
-    var a = card.querySelector('.mbtn-port');
-    if(a) window.location.href = a.href;
-  });
 
   /* boleto → WhatsApp con mensaje pre-llenado */
   var tkForm = document.getElementById('tk-form');
@@ -1068,6 +1021,6 @@
   }
 })();
 </script>
-<script src="assets/js/ink.js"></script>
+<script src="assets/js/ink.js?v=4"></script>
 </body>
 </html>

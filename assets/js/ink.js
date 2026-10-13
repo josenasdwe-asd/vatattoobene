@@ -1,8 +1,8 @@
-/* VATATTOOBENE · detalle 04 — títulos que se tatúan (v3)
-   La aguja escribe los títulos letra a letra: lo que aún no tatuó queda
-   invisible (piel en blanco); cada letra aparece con destello dorado y
-   vibra como máquina antes de asentarse. Con "reducir movimiento", la
-   tinta aparece en desvanecido escalonado, sin vibración. */
+/* VATATTOOBENE · detalle 04 — títulos que se tatúan (v4)
+   La aguja traza el título de un pase rápido: cada letra aparece con
+   destello dorado y se asienta. El trazo completo dura menos de medio
+   segundo, así que nunca demora la lectura. Con "reducir movimiento",
+   la tinta aparece en desvanecido escalonado, sin destello. */
 (function(){
   "use strict";
   var calm = false;
@@ -10,15 +10,14 @@
 
   var st = document.createElement('style');
   st.textContent =
-    '.ink-ch{opacity:0;transition:opacity .18s ease,color .3s ease,text-shadow .55s ease}' +
+    '.ink-ch{opacity:0;transition:opacity .15s ease,color .22s ease,text-shadow .4s ease}' +
     '.ink-on{opacity:1}' +
-    '.ink-now{color:var(--gold,#c9a84c);text-shadow:0 0 14px rgba(201,168,76,.75)}' +
-    '.inking{text-shadow:0 0 24px rgba(201,168,76,.30)}' +
-    '@keyframes inksettle{0%{text-shadow:0 0 26px rgba(201,168,76,.55),0 0 10px rgba(201,168,76,.35)}100%{text-shadow:0 0 0 rgba(201,168,76,0)}}' +
-    '.inked{animation:inksettle 1.2s ease-out both}';
+    '.ink-now{color:var(--gold,#c9a84c);text-shadow:0 0 12px rgba(201,168,76,.7)}' +
+    '.inking{text-shadow:0 0 18px rgba(201,168,76,.25)}' +
+    '@keyframes inksettle{0%{text-shadow:0 0 18px rgba(201,168,76,.4),0 0 8px rgba(201,168,76,.25)}100%{text-shadow:0 0 0 rgba(201,168,76,0)}}' +
+    '.inked{animation:inksettle .55s ease-out both}';
   document.head.appendChild(st);
 
-  var GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789·:×/\\|';
   var titles = [].slice.call(document.querySelectorAll('h1, h2'));
   var hero = document.querySelector('header.hero h1');
   if (!titles.length) return;
@@ -59,48 +58,38 @@
 
     function revealAll(){
       chars.forEach(function(o){
-        if (o.sp.isConnected){ o.sp.classList.add('ink-on'); o.sp.classList.remove('ink-now'); o.sp.textContent = o.ch; }
+        if (o.sp.isConnected){ o.sp.classList.add('ink-on'); o.sp.classList.remove('ink-now'); }
       });
     }
     function finish(){
       revealAll();
       el.classList.remove('inking');
       el.classList.add('inked'); /* destello de tinta fresca sobre el título completo */
-      setTimeout(function(){ el.classList.remove('inked'); }, 1400);
+      setTimeout(function(){ el.classList.remove('inked'); }, 700);
       delete el.dataset.inking;
     }
 
     el.classList.add('inking');
 
-    if (calm){ /* reducir movimiento: desvanecido escalonado, sin vibración */
+    if (calm){ /* reducir movimiento: desvanecido escalonado, sin destello */
       chars.forEach(function(o, k){
-        setTimeout(function(){ if (o.sp.isConnected) o.sp.classList.add('ink-on'); }, k * 34);
+        setTimeout(function(){ if (o.sp.isConnected) o.sp.classList.add('ink-on'); }, Math.min(k * 18, 360));
       });
-      setTimeout(finish, chars.length * 34 + 320);
+      setTimeout(finish, 640);
       return;
     }
 
-    /* la aguja avanza letra a letra, con pausa de artesano (1.6-2.8s por título) */
-    var step = Math.max(70, Math.min(130, 2600 / chars.length));
+    /* pase rápido de la aguja: el título completo queda tatuado en ≤ ~0.5 s */
+    var step = Math.max(12, Math.min(40, 460 / chars.length));
     chars.forEach(function(o, k){
       setTimeout(function(){
         if (!o.sp.isConnected) return; /* setLang pudo reemplazar el texto */
         o.sp.classList.add('ink-on', 'ink-now'); /* aparece dorada, bajo la aguja */
-        var swaps = 0;
-        var iv = setInterval(function(){
-          swaps++;
-          if (swaps >= 2 || !o.sp.isConnected){
-            clearInterval(iv);
-            o.sp.textContent = o.ch; /* se asienta: la tinta seca */
-            o.sp.classList.remove('ink-now');
-            return;
-          }
-          o.sp.textContent = GLYPHS.charAt(Math.floor(Math.random() * GLYPHS.length));
-        }, 62);
-      }, k * step + Math.random() * 35);
+        setTimeout(function(){ if (o.sp.isConnected) o.sp.classList.remove('ink-now'); }, 150);
+      }, k * step);
     });
     /* red de seguridad: aunque algo falle, el título queda visible */
-    setTimeout(finish, chars.length * step + 700);
+    setTimeout(finish, chars.length * step + 300);
   }
 
   function inViewport(el){
@@ -114,8 +103,7 @@
       es.forEach(function(e){
         if (!e.isIntersecting) return;
         io.unobserve(e.target);
-        /* el hero arranca con una pausa dramática; el resto, al vuelo */
-        var d = e.target === hero ? 250 : 60;
+        var d = e.target === hero ? 100 : 20;
         setTimeout(function(){ tattoo(e.target); }, d);
       });
     }, { threshold: .4 });

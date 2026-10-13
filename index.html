@@ -379,8 +379,9 @@
   .tk-eyes i{position:absolute;border-radius:50%;mix-blend-mode:screen;filter:blur(3px) saturate(1.35);
     background:radial-gradient(closest-side,rgba(255,212,105,1) 0%,rgba(255,165,35,.78) 42%,rgba(255,120,0,.34) 62%,rgba(255,120,0,0) 80%);
     animation:eyeFlicker 2.6s ease-in-out infinite}
-  .tk-eyes i:nth-child(1){left:68.6%;top:34.7%;width:4.7%;aspect-ratio:1.5/1}
-  .tk-eyes i:nth-child(2){left:81.9%;top:31.7%;width:4.3%;aspect-ratio:1.5/1;animation-delay:1.3s}
+  /* centros medidos sobre book-ticket.jpg 1365x768: ojo izq (70.1%,37.1%), ojo der (83.8%,35.6%) */
+  .tk-eyes i:nth-child(1){left:67.7%;top:35.5%;width:4.7%;aspect-ratio:1.5/1}
+  .tk-eyes i:nth-child(2){left:81.6%;top:34.2%;width:4.3%;aspect-ratio:1.5/1;animation-delay:1.3s}
   @keyframes eyeFlicker{0%,100%{opacity:.8;transform:scale(1)}45%{opacity:1;transform:scale(1.14)}}
   @media(prefers-reduced-motion:reduce){.tk-eyes i{animation:none}}
 
@@ -806,7 +807,7 @@
       <h2 class="res-title" data-es="TU TURNO EN LA SILLA." data-en="YOUR TURN IN THE CHAIR.">TU TURNO EN LA SILLA.</h2>
     </div>
     <div class="book rv" id="book-ticket" role="region" aria-label="Reserva tu cita en VATATTOOBENE">
-      <img class="tk-photo" src="assets/img/book-ticket.jpg" alt="Ticket vintage de VATATTOOBENE — papel envejecido, logo chicano y tigre de ojos ámbar" loading="lazy" onerror="this.style.display='none'">
+      <img class="tk-photo" src="assets/img/book-ticket.jpg?v=2" alt="Ticket vintage de VATATTOOBENE — papel envejecido, logo chicano y tigre de ojos ámbar" loading="lazy" onerror="this.style.display='none'">
       <div class="tk-inner">
       <h2 data-es="TU TURNO EN LA SILLA." data-en="YOUR TURN IN THE CHAIR.">TU TURNO EN LA SILLA.</h2>
       <p class="tk-lead" data-es="Llena el boleto y te escribimos en 24 horas con tu presupuesto." data-en="Fill in the ticket — we'll message you within 24 hours with your quote.">Llena el boleto y te escribimos en 24 horas con tu presupuesto.</p>
